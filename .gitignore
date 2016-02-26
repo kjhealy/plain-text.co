@@ -1,0 +1,5 @@
+assets/
+libs/
+public/
+cache/
+*.html
