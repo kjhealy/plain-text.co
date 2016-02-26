@@ -1,3 +1,11 @@
+
+html, body {
+
+    font-size: 18px;
+    
+}
+
+
 .section {
     padding-top: 1.25em;
     padding-bottom: 2em;
@@ -14,4 +22,37 @@
     font-size: 1.2em;
     text-align: right;
     padding: 0.25em; 0em; 0em; 0.1em;
+}
+
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  border-left: 5px solid #eee;
+}
+
+.tocify {
+    font-size: 12px;
+}
+
+
+@media (max-width: 767px) {
+    
+  html, body{
+      font-size: 16px;
+  }
+
+  .sourceCode pre {
+      font-size: 60%;
+  }
+
+  .listing pre {
+      font-size: 60%;
+  }
+
+  
+  blockquote {
+  font-size: 14px;
+  }
 }
