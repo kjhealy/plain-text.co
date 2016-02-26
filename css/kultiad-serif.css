@@ -39,7 +39,7 @@ body {
 
 @media screen and (min-width: 600px) {
   .container {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   .main {
