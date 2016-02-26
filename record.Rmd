@@ -36,28 +36,3 @@ Regardless of whether you choose to use a formal revision control system, you sh
 
 
 
-[^1]: This may also be true if you are about to move from being a
-    graduate student to starting as a faculty member, though perhaps the
-    rationale is less compelling given the costs.
-
-[^3]: For further argument about the advantages of text-editors over
-    word processors see Allin Cottrell's polemic, \`\`[Word Processors:
-    Stupid and Inefficient](http://www.ecn.wfu.edu/~cottrell/wp.html).''
-
-
-[^4]: The actual business of *giving* talks based on your work is beyond
-    the scope of this discussion. Suffice to say that there is plenty of
-    good advice available via Google, and you should pay attention to
-    it.
-
-[^9]: TextMate also has some support for this way of working, but it is
-    conceived and accomplished a little differently.
-
-[^10]: See [Merlin Mann](http://inboxzero.com/), amongst others, for
-    more on this point.
-
-[^11]: Mike Hall's brilliant "[Org-Mode in your Pocket is a GNU-Shaped
-    Devil](http://mph.puddingbowl.org/2010/02/org-mode-in-your-pocket-is-a-gnu-shaped-devil/)"
-    makes this point very well.
-
-[^commandline]: Here's how. Open a terminal window and type `xcode-select --install`. You can install `pandoc` and many other tools using the [Homebrew package manager](http://brew.sh).

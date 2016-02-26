@@ -25,3 +25,13 @@ R can be used directly within Emacs by way of a package called ESS (for "Emacs S
 ![Working with R in Emacs using ESS. A document containing R code (`apple.r`) is open in the top half of the screen. Below the divider, an R session is running, also inside Emacs. Code from the top pane is sent to the bottom with a keyboard shortcut, where it is evaluated by R. We can also jump down to the bottom pane and do work there. Small details like a lint checker, active line highlighting, and revision-control information are also visible.](figures/emacs-ess-2016.png){#fig:ess}
 
 You'll present your results in papers, but also in talks where you will likely use some kind of presentation software. You can use Microsoft PowerPoint or Apple's [Keynote](http://www.apple.com/iwork/keynote/). Or you produce HTML or PDF slides [directly](http://rmarkdown.rstudio.com/ioslides_presentation_format.html) from plain text documents.[^4]
+
+[^3]: For further argument about the advantages of text-editors over
+    word processors see Allin Cottrell's polemic, \`\`[Word Processors:
+    Stupid and Inefficient](http://www.ecn.wfu.edu/~cottrell/wp.html).''
+
+
+[^4]: The actual business of *giving* talks based on your work is beyond
+    the scope of this discussion. Suffice to say that there is plenty of
+    good advice available via Google, and you should pay attention to
+    it.

@@ -3,7 +3,7 @@ title: "The Plain Person's Guide to Plain Text Social Science"
 crossrefYaml: "./pandoc-crossref-settings.yaml"
 ...
 
-### Get this whole guide [as a single PDF file](http://kieranhealy.org/files/papers/plain-person-text.pdf)
+**Get this whole guide [as a single PDF file](http://kieranhealy.org/files/papers/plain-person-text.pdf)**
 
 ![A plain-text document toolchain.](figures/workflow-wide.png){#fig:workflow-diagram}
 
@@ -49,3 +49,7 @@ In the Engineering model, meanwhile, plain text files are at the center of your 
 This distinction is meant to capture a tendency in organization, not a rigid divide---still less a sort of personality. Obviously it is possible organize things on the Office model. (Indeed, it's the dominant way.) Applications like [Scrivener](http://www.literatureandlatte.com), meanwhile, combine elements of the two approaches. Scrivener embraces the "bittyness" of large writing projects in an effective way, and can spit out clean copy in a variety of formats. Scrivener is built for people writing lengthy fiction (or qualitative non-fiction) rather than anything with quantitative data analysis, so I have never used it extensively. Microsoft Word, meanwhile, still rules large swathes of the Humanities and the Social Sciences, and the production process of many publishers. So even if you prefer plain text for other reasons---especially in connection with project management and data analysis---the routine need or obligation to provide a Word document to someone is one of the main reasons to want to be able to easily convert things. HTML is a great lingua franca.
 
 This article is mostly about the Engineering model. But many people use the Office model, and you may end up working with (or for) some of them. In those cases, it is generally easier for you to use their software than *vice versa*, if only because you are likely have a copy of Word on your computer already. In these circumstances you might also  collaborate using Google Docs or some other service that allows for simultaneously editing the master copy of a document. This may not be ideal, but it is better than not collaborating. There is little to be gained from plain-text dogmatism in a `.docx` world.
+
+[^1]: This may also be true if you are about to move from being a
+    graduate student to starting as a faculty member, though perhaps the
+    rationale is less compelling given the costs.
