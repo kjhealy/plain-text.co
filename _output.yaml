@@ -1,0 +1,19 @@
+html_document:
+  self_contained: false
+  lib_dir: libs
+  pandoc_args: [
+    "--number-sections",
+    "--filter", "pandoc-crossref",
+    "--filter", "pandoc-citeproc",
+    "--csl=/Users/kjhealy/.pandoc/csl/apsa.csl",
+    "--bibliography=/Users/kjhealy/Documents/bibs/socbib-pandoc.bib"
+    ]
+  md_extensions: +implicit_figures
+  theme: readable
+  fig_caption: true
+  highlight: tango
+  toc: true
+  toc_float:
+    collapsed: false
+    smooth_scroll: false
+  css: styles.css
