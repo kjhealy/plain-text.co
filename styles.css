@@ -19,7 +19,7 @@ html, body {
 }
 
 .caption {
-    font-size: 1.2em;
+    font-size: 16px;
     text-align: right;
     padding: 0.25em; 0em; 0em; 0.1em;
 }
@@ -50,6 +50,11 @@ blockquote {
   .listing pre {
       font-size: 60%;
   }
+
+
+  .caption {
+    font-size: 14px;
+}
 
   
   blockquote {
