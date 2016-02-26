@@ -154,3 +154,8 @@ the way Emacs talks to the GNU ELPA package server.
 **5.** (Optional.) Once Emacs is up and running, do
 `M-x starter-kit-compile` to byte-compile the starter-kit's files, for
 slightly faster loading.
+
+
+**Next: [Alternatives](http://plain-text.co/pros.html)  →**
+
+**← Previous: [Automation with Pandoc and Make](http://plain-text.co/make.html)**

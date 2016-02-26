@@ -44,3 +44,8 @@ All of which is just to reiterate two things. First, I am not advocating these t
 [^11]: Mike Hall's brilliant "[Org-Mode in your Pocket is a GNU-Shaped
     Devil](http://mph.puddingbowl.org/2010/02/org-mode-in-your-pocket-is-a-gnu-shaped-devil/)"
     makes this point very well.
+
+
+**Next: [Links to Other Resources](http://plain-text.co/links.html)  →**
+
+**← Previous: [An Emacs Starter Kit](http://plain-text.co/esk.html)**

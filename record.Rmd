@@ -36,3 +36,6 @@ Regardless of whether you choose to use a formal revision control system, you sh
 
 
 
+**Next: [Edit Text](http://plain-text.co/edit.html) →**
+
+**← Previous: [Introduction](http://plain-text.co/index.html) **

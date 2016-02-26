@@ -35,3 +35,6 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [GitHub](http://github.com). Host public Git repositories for free. Pay to host private ones. Also a source for publicly available code (e.g. R packages and utilities) written by other people.
 - [Marked 2](http://marked2app.com). Live HTML previewing of Markdown documents. Mac OS X only.
 - [Sublime Text](http://sublimetext.com). Python-based text editor.
+
+
+**← Previous: [Alternatives](http://plain-text.co/pros.html)**

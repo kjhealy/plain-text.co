@@ -134,3 +134,7 @@ If things are working properly, then a markdown file called `article-knitr.md` w
 
 
 [^commandline]: Here's how. Open a terminal window and type `xcode-select --install`. You can install `pandoc` and many other tools using the [Homebrew package manager](http://brew.sh).
+
+**Next: [An Emacs Starter Kit](http://plain-text.co/esk.html)  →**
+
+**← Previous: [Reproducing Your Work](http://plain-text.co/reproduce.html)**

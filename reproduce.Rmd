@@ -66,3 +66,6 @@ The literate programming approach has its limits. For large or complex analyses 
 
 
 
+**Next: [Automation with Pandoc and Make](http://plain-text.co/make.html) →**
+
+**← Previous: [Keep a Record of Your Work](http://plain-text.co/record.html)**
