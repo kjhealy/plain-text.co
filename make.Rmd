@@ -56,6 +56,7 @@ We manage this process using a tool called [`make`](https://www.gnu.org/software
 The `Makefile` in the sample [`md-starter` project](https://github.com/kjhealy/md-starter) will convert any markdown files in the working directory to HTML, `.tex`, `.pdf`, or `.docx` files as requested. Typing `make html` at the command line will produce `.html` files from any `.md` files in the directory, for example. The PDF output (from `make pdf`) will look like this article, more or less. The different pieces of the `Makefile` define a few variables that specify the relationship between the different file types. In essence the rules say, for example, that all the PDF files in the directory depend on changes to an `.md` file with the same name; that the same is true of the HTML files in the directory, and so on. Then the  show the `pandoc` commands that generate the output files from the markdown input. The Makefile itself is shown in @lst:makefile.
 
 ```{#lst:makefile .bash caption="A Makefile"}
+
 ## The big gotcha for Makefiles is that for no good reason they use 
 ## TAB rather than spaces to indent commands associated with rules. 
 ## If you use spaces, `make` will not work.
@@ -64,7 +65,8 @@ The `Makefile` in the sample [`md-starter` project](https://github.com/kjhealy/m
 ## for all markdown files in the directory
 MEXT = md
 
-## Variable for all markdown files in the working directory
+## Variable expands to a list of all markdown files 
+## in the working directory
 SRC = $(wildcard *.$(MEXT))
 
 ## Location of Pandoc support files.
@@ -76,7 +78,7 @@ BIB = /Users/kjhealy/Documents/bibs/socbib-pandoc.bib
 ## CSL stylesheet (located in the csl folder of the PREFIX directory).
 CSL = apsa
 
-## Dependencies: .pdf depends on .md, .html depends on .md, etc
+## x.pdf depends on x.md, x.html depends on x.md, etc
 PDFS=$(SRC:.md=.pdf)
 HTML=$(SRC:.md=.html)
 TEX=$(SRC:.md=.tex)
@@ -89,10 +91,10 @@ html:	clean $(HTML)
 tex:	clean $(TEX)
 docx:	clean $(DOCX)
 
-## The commands associated with dependencies.
+## The commands associated with each rule.
 ## This first one is run when `make html` is typed.
-## Read the rule as "Each .html file depends on a .md file with the
-## same name. Run this pandoc command if the .md file has changed."
+## Read the rule as "When making the html file, 
+## run this pandoc command if the .md file has changed."
 %.html:	%.md
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block \ 
     -w html -S --template=$(PREFIX)/templates/html.template \
