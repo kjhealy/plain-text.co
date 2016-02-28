@@ -9,7 +9,7 @@ html_document:
     "--bibliography=/Users/kjhealy/Documents/bibs/socbib-pandoc.bib"
     ]
   md_extensions: +implicit_figures
-  theme: readable
+  theme: spacelab
   fig_caption: true
   highlight: tango
   toc: true
