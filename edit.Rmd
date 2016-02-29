@@ -36,7 +36,10 @@ You'll present your results in papers, but also in talks where you will likely u
     good advice available via Google, and you should pay attention to
     it.
 
-
 **Next: [Reproducing Your Work](http://plain-text.co/reproduce.html) →**
 
 **← Previous: [Keep a Record of Your Work](http://plain-text.co/record.html)**
+
+
+# References
+

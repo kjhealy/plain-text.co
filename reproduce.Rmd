@@ -117,8 +117,8 @@ print(p)
 
 The literate programming approach has its limits. For large or complex analyses it can still make more sense to produce the final result in pieces rather than all at once in a single `.Rmd` file. This is one of the reasons it remains important to manage your projects using some kind of version control, so you can keep track of work that is needed but might not fit inside a single `.Rmd` document. 
 
-
-
 **Next: [Automation with Pandoc and Make](http://plain-text.co/make.html) →**
 
 **← Previous: [Keep a Record of Your Work](http://plain-text.co/record.html)**
+
+# References
