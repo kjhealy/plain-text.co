@@ -14,7 +14,7 @@ html: $(HTML_FILES)
 
 %.html: %.Rmd
 	R --slave -e "set.seed(100);rmarkdown::render('$<')"
-	proc-typekit.sh $@
+	proc-panweb.sh $@
 
 clean:
 	$(RM) $(HTML_FILES)
