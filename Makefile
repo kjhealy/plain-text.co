@@ -20,6 +20,7 @@ clean:
 	$(RM) $(HTML_FILES)
 
 public: html
+	mkdir -p public
 	cp *.Rmd public/
 	cp *.html public/
 	cp styles.css public/
