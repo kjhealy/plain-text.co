@@ -24,7 +24,7 @@ passively signal to you when you've done something wrong syntactically
 (such as forget a closing brace or semicolon or quotation mark), and
 [automagically](http://en.wiktionary.org/wiki/automagical) indent or
 tidy up your code as you write it. More advanced editors can work with
-a [linter](http://en.wikipedial.org/wiki/Lint_(software)) to more
+a [linter](http://en.wikipedia.org/wiki/Lint_(software)) to more
 actively check and flag stylistic or syntactical errors as you go. If
 you are writing a scholarly paper or a dissertation that incorporates
 data of any sort, and especially numerical data, a good text editor
