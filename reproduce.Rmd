@@ -144,8 +144,8 @@ support for `.Rmd` files and makes it very easy to produce HTML and
 PDF output, and to publish your reports to the web via its
 [RPubs](http://rpubs.com) service.
 
-The [knitr website](http://yihui.name/knitr/) has a numerous
-[worked examples](http://yihui.name/knitr/demo/minimal/) showing how
+The [knitr website](http://yihui.name/knitr/) has 
+[numerous examples](http://yihui.name/knitr/demo/minimal/) showing how
 it works. These range from
 [the basic setup](https://raw.githubusercontent.com/yihui/knitr-examples/master/001-minimal.Rmd)
 to [more developed cases](http://yihui.name/knitr/demos/) to

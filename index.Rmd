@@ -3,7 +3,9 @@ title: "The Plain Person's Guide to Plain Text Social Science"
 crossrefYaml: "./pandoc-crossref-settings.yaml"
 ...
 
-**Get this whole guide [as a single PDF file](http://kieranhealy.org/files/papers/plain-person-text.pdf)**
+- Get the guide [as a single PDF file](http://kieranhealy.org/files/papers/plain-person-text.pdf).
+- Change the `.html` extension to `.Rmd` to see the plain-text source of any page. 
+- Take a look at the [github repository](http://github.com/kjhealy/plain-text.co) for the project.
 
 ![A plain-text document toolchain.](figures/workflow-wide.png){#fig:workflow-diagram}
 
