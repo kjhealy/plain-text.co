@@ -20,6 +20,7 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [Pandoc](http://pandoc.org). Converts plain-text documents to and from a wide variety of formats. Can be installed with Homebrew. Be sure to also install `pandoc-citeproc` for processing citations and bibliographies, and `pandoc-crossref` for producing cross-references and labels.
 - [Git](http://git-scm.org). Version control system. Installs with Apple's Developer Tools, or get the latest version via Homebrew.
 - [GNU Make](http://www.gnu.org/software/make). You tell `make` what the steps are to create the pieces of a document or program. As you edit and change the various pieces, it automatically figures out which pieces need to be updated and recompiled, and issues the commands to do that. See Karl Broman's [Minimal Make](http://kbroman.org/minimal_make/) for a short introduction. Make will be installed automatically with Apple's developer tools.
+- [lintr](https://github.com/jimhester/lintr) and [flycheck](https://github.com/flycheck/flycheck). Tools that nudge you to write neater code.
 
 # Helpers and Templates
 - [Emacs Starter Kit for the Social Sciences](http://kjhealy.github.com/emacs-starter-kit/). Set Emacs up to use many of the tools described in this guide.
@@ -30,6 +31,7 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 
 # Guides
 
+- [R Style Guide](http://adv-r.had.co.nz/Style.html). Write readable code. 
 - [knitr demos](http://yihui.name/knitr/demos) Documentation and examples for `knitr` by its author, Yihui Xie. There is also a [knitr book](http://www.amazon.com/dp/1498716962/) covering the same ground in more detail.
 - [Rmarkdown documentation](http://rmarkdown.rstudio.com) from the makers of RStudio. Lots of good examples.
 - [Plain Person's Guide](http://github.com/kjhealy/plain-text.co) The git repository for this project.
