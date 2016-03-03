@@ -2,6 +2,10 @@
 title: "Do I have to use this stuff?"
 ---
 
+![How to Draw an Owl](figures/draw-owl.jpg){#fig:owl}
+
+> Installation/setup/whatever is always harder and much more poorly documented than mere usage --- [Jenny's Law](https://twitter.com/JennyBryan/status/699462966282858500)
+
 # Why Bother, Again?
 
 Running your data analysis in R, writing documents in Markdown or RMarkdown, doing both inside Emacs, processing them with `pandoc`, tracking things with Git and using (behind the scenes) various Unix tools and LaTeX ... this all sounds rather complicated. It has four main advantages. First, these formats, tools, and applications are all free. You can try them out without much in the way of monetary expense. (Your time may be a different matter, but although you don't believe me, you have more of that now than you will later.) Second, they are all open-source projects and are all available for Mac OS X, Linux and Windows. Portability is important, as is the long-term viability of the platform you choose to work with. If you change your computing system, your work can move with you easily. Third, they allow you to do your work in a portable, documented, and reproducible way. And fourth, the applications are closely integrated. Everything (including version control) can work inside Emacs. All of them can work directly with or take advantage of the others.

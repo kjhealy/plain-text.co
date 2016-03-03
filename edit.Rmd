@@ -80,10 +80,13 @@ discuss some of them below.
 Given all that, why mention it in the first place? Partly because it's
 the editor I use. Partly because it is available for all of the main
 desktop and laptop computing plaforms. And partly becuase it is very,
-*very* good at doing what I want it to do. In a modern computing
-environment there are many good reasons to use something like RStudio,
-or TextMate, or Sublime Text instead of Emacs (I return to these
-alternatives below). You will do fine if you prefer those instead.
+*very* good at doing what I want it to do. There are many good reasons
+to use something like [TextMate](https://macromates.com/download), or
+[Sublime Text](https://www.sublimetext.com) instead of Emacs (I return
+to these alternatives below). Similarly, when doing data analysis with
+R, you may just want to use the
+[RStudio environment](http://rstudio.com). You will do fine if you go
+with these alternatives.
 
 # Use Markdown 
 
@@ -126,19 +129,21 @@ the markdown source for this paragraph and its subheading.
 ```
 
 The excerpt shown in @lst:markdown-example shows a few of the most
-common Markdown conventions, most notably the standard way of
-representing hyperlinks, and emphasizing text. There are a number of
-Markdown variants, or "flavors", that have extended it to manage
-things like cross-references and labels, citations, and other textual
-elements. Citations are particularly important. The `pandoc-citeproc`
-filter is an add-on that handles these. It can be installed alongside
-`pandoc`. Your bibliography can be stored in one of a variety of
-formats (such as BibTeX, or EndNote). Within your `.md` document,
-cites are referred to by their key, such as
-`[@healy14datavisualsociol]`. When `pandoc` converts your document,
-the cite key is replaced with the reference information like this
-[@healy14datavisualsociol], and the full bibliographic entry is
-included in an automaticaly-generated list of references. Read
+common Markdown conventions, most notably how it represents headings
+and subheadings (a `#` symbol for a top-level header, with `##` for
+the next level down, and so on), how it represents hyperlinks, and how
+it emphasizes text. There are a number of Markdown variants, or
+"flavors", that have extended it to manage things like
+cross-references and labels, citations, and other textual elements.
+Citations are particularly important. The `pandoc-citeproc` filter is
+an add-on that handles these. It can be installed alongside `pandoc`.
+Your bibliography can be stored in one of a variety of formats (such
+as BibTeX, or EndNote). Within your `.md` document, cites are referred
+to by their key, such as `[@healy14datavisualsociol]`. When `pandoc`
+converts your document, the cite key is replaced with the reference
+information like this [@healy14datavisualsociol], and the full
+bibliographic entry is included in an automaticaly-generated list of
+references. Read
 [Pandoc's documentation for more details](http://pandoc.org/README.html#citations)
 about citations. At the end of the excerpt you can also see that the
 code listing is labeled with `@lst:markdown-example`, for example. A
