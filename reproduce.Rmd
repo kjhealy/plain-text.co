@@ -47,79 +47,14 @@ Computer Science people have a term of art for the inevitable process
 of decay that overtakes a project simply in virtue of its being left
 alone on the hard drive for six months or more: bit--rot.
 
-# Use Markdown to Write Documents
+# Use RMarkdown and `knitr` 
 
 An important way to caulk this gap is to use
 [RMarkdown](http://rmarkdown.rstudio.com) and
 [knitr](http://yihui.name/knitr/) when doing quantitative analysis in
-R. [Markdown](http://en.wikipedia.org/wiki/Markdown) is a way of
-writing plain text that includes information about the formatting of
-your document. It was originally developed by John Gruber, with input
-from Aaron Swartz. The aim was to make a simple format that could
-incorporate structural information about the document (such as
-headings and subheadings, *emphasis*,
-[hyperlinks](http://daringfireball.net/markdown), lists, footnotes,
-and so on), with minimal loss of readability. Formats like HTML or TeX
-are much more extensive markup languages, but Markdown was meant to be
-simple. Over the years it has become a *de facto* standard. Text
-editors and note-taking applications support it, and tools exist to
-convert Markdown not just into HTML (its original target output
-format) but many other document types as well. @lst:markdown-example
-shows the markdown source for this paragraph and its subheading.
-
-```{#lst:markdown-example .markdown caption="The Markdown source for a nearby part of this document."}
-### Using Markdown, RMarkdown and `knitr` 
-
-An important way to caulk this gap is to use
-[RMarkdown](http://rmarkdown.rstudio.com) and
-[knitr](http://yihui.name/knitr/) when doing quantitative analysis in
-R. [Markdown](http://en.wikipedia.org/wiki/Markdown) is a way of
-writing plain text that includes information about the formatting of
-your document. It was originally developed by John Gruber, with input
-from Aaron Swartz. The aim was to make a simple format that could
-incorporate structural information about the document (such as
-headings and subheadings, *emphasis*,
-[hyperlinks](http://daringfireball.net/markdown), lists, footnotes,
-and so on), with minimal loss of readability. Formats like HTML or TeX
-are much more extensive markup languages, but Markdown was meant to be
-simple. Over the years it has become a *de facto* standard. Text
-editors and note-taking applications support it, and tools exist to
-convert Markdown not just into HTML (its original target output
-format) but many other document types as well. @lst:markdown-example shows 
-the markdown source for this paragraph and its subheading.
-```
-
-The excerpt shown in @lst:markdown-example shows a few of the most
-common Markdown conventions, most notably the standard way of
-representing hyperlinks, and emphasizing text. There are a number of
-Markdown variants, or "flavors", that have extended it to manage
-things like cross-references and labels, citations, and other textual
-elements. Citations are particularly important. The `pandoc-citeproc`
-filter is an add-on that handles these. It can be installed alongside
-`pandoc`. Your bibliography can be stored in one of a variety of
-formats (such as BibTeX, or EndNote). Within your `.md` document,
-cites are referred to by their key, such as
-`[@healy14datavisualsociol]`. When `pandoc` converts your document,
-the cite key is replaced with the reference information like this
-[@healy14datavisualsociol], and the full bibliographic entry is
-included in an automaticaly-generated list of references. Read
-[Pandoc's documentation for more details](http://pandoc.org/README.html#citations)
-about citations. At the end of the excerpt you can also see that the
-code listing is labeled with `@lst:markdown-example`, for example. A
-Pandoc filter named
-[`pandoc-crossref`](https://github.com/lierdakil/pandoc-crossref)
-extends this `@label` convention to deal with labeled Figures, Tables,
-and so on. Using Markdown in this way means you do not have to worry
-whether your reference list is complete, or whether cross-references
-(to 'Figure 3' for example) remain correct after you move things
-around in your text.
-
-
-# Using RMarkdown and `knitr` to Include Code
-
-All of this applies just to `.md` documents. What about data analysis?
-RMarkdown is a way to incorporate R code into this process. This
-approach is designed to integrate the plain-text documentation or
+R. We've already seen how to write plain-text documents in Markdown's
+lightweight format. RMarkdown allows you to incorporate code into this
+process. It is designed to integrate the plain-text documentation or
 writeup of a data analysis and its execution. You write the text of
 your paper (or, more often, your report documenting a data analysis)
 as normal. Whenever you want to run a model, produce a table or
@@ -127,7 +62,7 @@ display a figure, rather than paste in the results of your work from
 elsewhere, you write down the R code that will produce the output you
 want. These "chunks" of code can be interspersed throughout the
 document. They are distinguished from the regular text by a special
-delimiter at the beginning and end of the block.
+delimiter at the beginning and end of the block. 
 
 When you're ready, you `knit` the document [@xie15dynamdocumr]. That
 is, you feed it to R, which processes the code chunks, and produces a
@@ -178,6 +113,13 @@ Emacs has strong support for them. RStudio also comes with built-in
 support for `.Rmd` files and makes it very easy to produce HTML and
 PDF output, and to publish your reports to the web via its
 [RPubs](http://rpubs.com) service.
+
+The [knitr website](http://yihui.name/knitr/) has a numerous
+[worked examples](http://yihui.name/knitr/demo/minimal/) showing how
+it works. These range from
+[the basic setup](https://raw.githubusercontent.com/yihui/knitr-examples/master/001-minimal.Rmd)
+to [more developed cases](http://yihui.name/knitr/demos/) to
+[more developed examples](http://yihui.name/knitr/demo/showcase/).
 
 The literate programming approach has its limits. For large or complex
 analyses it can still make more sense to produce the final result in

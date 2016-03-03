@@ -1,11 +1,11 @@
 ---
-title: "Making it"
-crossrefYaml: "./pandoc-crossref-settings.yaml"
+title: "Making it" 
+crossrefYaml: "./pandoc-crossref-settings.yaml"  
 ---
 
 
 
-# Pulling it Together
+# Pulling it Together 
 
 We write papers. Those papers cite books and articles. They often incorporate tables and figures created in [R](http://www.r-project.org). What we want to do is quickly turn a Markdown file containing things like that into a properly formatted scholarly paper, without giving up any of the necessary scholarly apparatus (on the output side) or the convenience and convertibilty of Markdown (on the input side). We want to easily get good-looking output from the same source in HTML, PDF, and DOCX formats. And we want to do that with an absolute minimum of---ideally, *no*---post-processing of the output beyond the basic conversion step. This is within our reach.
 

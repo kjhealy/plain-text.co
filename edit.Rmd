@@ -3,7 +3,7 @@ title: "Write"
 crossrefYaml: "./pandoc-crossref-settings.yaml"
 ---
 
-# Edit Text 
+# Edit Text in a Text Editor
 
 If you are going to be doing quantitative analysis of any kind then
 you should write using a good text editor. The same can be said, I'd
@@ -85,7 +85,72 @@ environment there are many good reasons to use something like RStudio,
 or TextMate, or Sublime Text instead of Emacs (I return to these
 alternatives below). You will do fine if you prefer those instead.
 
-# Analyze Data and Present Results
+# Use Markdown 
+
+When you write papers in plain text, how do you manage the formatting,
+sectioning, and other related aspects of your document?
+[Markdown](http://en.wikipedia.org/wiki/Markdown) is a
+loosely-standardized way of writing plain text that includes
+information about the formatting of your document. It was originally
+developed by John Gruber, with input from Aaron Swartz. The aim was to
+make a simple format that could incorporate structural information
+about the document (such as headings and subheadings, *emphasis*,
+[hyperlinks](http://daringfireball.net/markdown), lists, footnotes,
+and so on), with minimal loss of readability. Formats like HTML or TeX
+are much more extensive markup languages, but Markdown was meant to be
+simple. Over the years it has become a *de facto* standard. Text
+editors and note-taking applications support it, and tools exist to
+convert Markdown not just into HTML (its original target output
+format) but many other document types as well. @lst:markdown-example
+shows the markdown source for this paragraph and its subheading.
+
+```{#lst:markdown-example .markdown caption="The Markdown source for a nearby part of this document."}
+
+# Use Markdown
+
+When you write papers in plain text, how do you manage the formatting,
+sectioning, and other related aspects of your document?
+[Markdown](http://en.wikipedia.org/wiki/Markdown) is a
+loosely-standardized way. It was originally developed by John Gruber, 
+with input from Aaron Swartz. The aim was to make a simple format 
+that could incorporate structural information about the document 
+(such as headings and subheadings, *emphasis*,
+[hyperlinks](http://daringfireball.net/markdown), lists, footnotes,
+and so on), with minimal loss of readability. Formats like HTML or TeX
+are much more extensive markup languages, but Markdown was meant to be
+simple. Over the years it has become a *de facto* standard. Text
+editors and note-taking applications support it, and tools exist to
+convert Markdown not just into HTML (its original target output
+format) but many other document types as well. @lst:markdown-example shows 
+the markdown source for this paragraph and its subheading.
+```
+
+The excerpt shown in @lst:markdown-example shows a few of the most
+common Markdown conventions, most notably the standard way of
+representing hyperlinks, and emphasizing text. There are a number of
+Markdown variants, or "flavors", that have extended it to manage
+things like cross-references and labels, citations, and other textual
+elements. Citations are particularly important. The `pandoc-citeproc`
+filter is an add-on that handles these. It can be installed alongside
+`pandoc`. Your bibliography can be stored in one of a variety of
+formats (such as BibTeX, or EndNote). Within your `.md` document,
+cites are referred to by their key, such as
+`[@healy14datavisualsociol]`. When `pandoc` converts your document,
+the cite key is replaced with the reference information like this
+[@healy14datavisualsociol], and the full bibliographic entry is
+included in an automaticaly-generated list of references. Read
+[Pandoc's documentation for more details](http://pandoc.org/README.html#citations)
+about citations. At the end of the excerpt you can also see that the
+code listing is labeled with `@lst:markdown-example`, for example. A
+Pandoc filter named
+[`pandoc-crossref`](https://github.com/lierdakil/pandoc-crossref)
+extends this `@label` convention to deal with labeled Figures, Tables,
+and so on. Using Markdown in this way means you do not have to worry
+whether your reference list is complete, or whether cross-references
+(to 'Figure 3' for example) remain correct after you move things
+around in your text.
+
+# Use R with ESS or RStudio
 
 You will probably be doing some---perhaps a great deal---of
 quantitative data analysis. R is an environment for statistical
@@ -114,7 +179,7 @@ analysis while building up code you can use again in future.
 You'll present your results in papers, but also in talks where you
 will likely use some kind of presentation software. You can use
 Microsoft PowerPoint or Apple's
-[Keynote](http://www.apple.com/iwork/keynote/). Or you produce HTML or
+[Keynote](http://www.apple.com/iwork/keynote/). Or, you can produce HTML or
 PDF slides
 [directly](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
 from plain text documents.[^4]

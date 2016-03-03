@@ -13,6 +13,7 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [Homebrew package manager](http://brew.sh). A convenient way to install several of the tools here, including Emacs and Pandoc.
 - [Emacs](http://www.gnu.org/software/emacs/). A powerful text editor. Ready-to-go Mac version at [Emacs for Mac OS X](http://emacsformacosx).
 - [R](http://r-project.org). A platform for statistical computing.
+- [knitr](http://yihui.name/knitr/). Reproducible plain-text documents from within R. 
 - [Python](http://python.org) and [SciPy](http://www.scipy.org/). Python is a general-purpose programming language increasingly used in data manipulation and analysis.
 - [RStudio](http://rstudio.com). An IDE for R. The most straightforward way to get into using R and RMarkdown.
 - [TeX and LaTeX](http://tug.org). A typesetting and document preparation system. You can write files in `.tex` format directly, or you can just have it available in the background for other tools to use. The [MacTeX Distribution](http://tug.org/mactex) is the one to install for OS X.
@@ -29,7 +30,7 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 
 # Guides
 
-- [knitr](http://yihui.name/knitr/) Documentation and examples for `knitr` by its author, Yihui Xie. There is also a [knitr book](http://www.amazon.com/dp/1498716962/) covering the same ground in more detail.
+- [knitr demos](http://yihui.name/knitr/demos) Documentation and examples for `knitr` by its author, Yihui Xie. There is also a [knitr book](http://www.amazon.com/dp/1498716962/) covering the same ground in more detail.
 - [Rmarkdown documentation](http://rmarkdown.rstudio.com) from the makers of RStudio. Lots of good examples.
 - [Plain Person's Guide](http://github.com/kjhealy/plain-text.co) The git repository for this project.
 - [Karl Broman's Tutorials and Guides](http://kbroman.org/pages/tutorials) Accurate and concise guides to many of the tools and topics described here, including [getting started with reproducible research](http://kbroman.org/steps2rr), [using git and GitHub](http://kbroman.org/github_tutorial), and [working with knitr](http://kbroman.org/knitr_knutshell).
