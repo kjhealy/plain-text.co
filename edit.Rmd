@@ -74,19 +74,17 @@ possibly also fire), it doesn't share many of the conventions of
 modern applications. Like most powerful text editors, Emacs offers
 many opportunities to waste your time learning its particular
 conventions, tweaking its settings, and generally customizing it.
-There are several good alternatives on each major platform, and I
-discuss some of them below.
+There are several good alternatives on each major platform.
 
 Given all that, why mention it in the first place? Partly because it's
 the editor I use. Partly because it is available for all of the main
-desktop and laptop computing plaforms. And partly becuase it is very,
+desktop and laptop computing plaforms. And partly because it is very,
 *very* good at doing what I want it to do. There are many good reasons
 to use something like [TextMate](https://macromates.com/download), or
-[Sublime Text](https://www.sublimetext.com) instead of Emacs (I return
-to these alternatives below). Similarly, when doing data analysis with
-R, you may just want to use the
-[RStudio environment](http://rstudio.com). You will do fine if you go
-with these alternatives.
+[Sublime Text](https://www.sublimetext.com) instead of Emacs.
+Similarly, when doing data analysis with R, you may just want to use
+the [RStudio environment](http://rstudio.com). You will do fine if you
+go with these alternatives.
 
 # Use Markdown 
 
@@ -184,7 +182,8 @@ analysis while building up code you can use again in future.
 You'll present your results in papers, but also in talks where you
 will likely use some kind of presentation software. You can use
 Microsoft PowerPoint or Apple's
-[Keynote](http://www.apple.com/iwork/keynote/). Or, you can produce HTML or
+[Keynote](http://www.apple.com/iwork/keynote/). Or,
+you can produce HTML or
 PDF slides
 [directly](http://rmarkdown.rstudio.com/ioslides_presentation_format.html)
 from plain text documents.[^4]
