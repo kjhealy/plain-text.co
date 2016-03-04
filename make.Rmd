@@ -7,13 +7,67 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 
 # Pulling it Together 
 
-We write papers. Those papers cite books and articles. They often incorporate tables and figures created in [R](http://www.r-project.org). What we want to do is quickly turn a Markdown file containing things like that into a properly formatted scholarly paper, without giving up any of the necessary scholarly apparatus (on the output side) or the convenience and convertibilty of Markdown (on the input side). We want to easily get good-looking output from the same source in HTML, PDF, and DOCX formats. And we want to do that with an absolute minimum of---ideally, *no*---post-processing of the output beyond the basic conversion step. This is within our reach.
+We write papers. Those papers cite books and articles. They often
+incorporate tables and figures created in
+[R](http://www.r-project.org). What we want to do is quickly turn a
+Markdown file containing things like that into a properly formatted
+scholarly paper, without giving up any of the necessary scholarly
+apparatus (on the output side) or the convenience and convertibilty of
+Markdown (on the input side). We want to easily get good-looking
+output from the same source in HTML, PDF, and DOCX formats. And we
+want to do that with an absolute minimum of---ideally,
+*no*---post-processing of the output beyond the basic conversion step.
+This is within our reach.
 
 ![A plain-text document toolchain.](figures/workflow-wide.png){#fig:workflow-diagram}
 
-A sample document flow is shown in @fig:workflow-diagram. I promise it is less insane than it appears. Describing it all at once might make it sound a little crazy. But, at bottom, there are just two separable pieces. First, `knitr` converts `.Rmd` files to `.md` files. Second, John MacFarlane's superb [Pandoc](http://pandoc.org) converts `.md` files to HTML, `.tex`, PDF, or Word formats. In both cases we use a few switches, templates and configuration files to do that nicely and with a minimum of fuss. You should install a standard set of Unix developer tools, which on OS X can  conveniently be installed [directly from the command line](https://developer.apple.com/library/ios/technotes/tn2339/_index.html).[^commandline] along with R, knitr, pandoc, and a [TeX distribution](https://tug.org/mactex/). Note that the default set-ups for `knitr` and `pandoc`---the two key pieces of the process---will do most of what we want with no further tweaking. What I will you here are just the relevant options to use and switches to set for these tools, together with some templates and document samples showing how nice-looking output can be produced in practice.
+A sample document flow is shown in @fig:workflow-diagram. I promise it
+is less insane than it appears. Describing it all at once might make
+it sound a little crazy. But, at bottom, there are just two separable
+pieces. First, `knitr` converts `.Rmd` files to `.md` files. Second,
+John MacFarlane's superb [Pandoc](http://pandoc.org) converts `.md`
+files to HTML, `.tex`, PDF, or Word formats. In both cases we use a
+few switches, templates and configuration files to do that nicely and
+with a minimum of fuss. You should install a standard set of Unix
+developer tools, which on OS X can conveniently be installed
+[directly from the command line](https://developer.apple.com/library/ios/technotes/tn2339/_index.html).[^commandline]
+along with R, knitr, pandoc, and a
+[TeX distribution](https://tug.org/mactex/). Note that the default
+set-ups for `knitr` and `pandoc`---the two key pieces of the
+process---will do most of what we want with no further tweaking. What
+I will you here are just the relevant options to use and switches to
+set for these tools, together with some templates and document samples
+showing how nice-looking output can be produced in practice.
 
-I write everything in Emacs, but as I hope is clear by now, that doesn't matter. Use whatever text editor you like and just learn the hell out of it. The [custom LaTeX style files](https://github.com/kjhealy/latex-custom-kjh) were originally put together to let me write nice-looking `.tex` files directly, but now they just do their work in the background. Pandoc will use them when it converts things to PDF. The heavy lifting is done by the [org-preamble-pdflatex.sty](https://github.com/kjhealy/latex-custom-kjh/tree/master/needs-org-mode) and [memoir-article-styles](https://github.com/kjhealy/latex-custom-kjh/tree/master/needs-memoir) files. If you install these files where LaTeX can find them---i.e., if you can compile a LaTeX document [based on this example](https://github.com/kjhealy/latex-custom-kjh/blob/master/templates/basic/article.tex)---then you are good to go. My [BibTeX master file](https://github.com/kjhealy/socbibs) is also available, but you will probably want to use your own, changing references to it in the templates as appropriate. Second, we have the custom pandoc stuff. [Here is the repository for that](https://github.com/kjhealy/pandoc-templates). Much of the material there is designed to go in the `~/.pandoc/` directory, which is where pandoc expects to find its configuration files. I have also set up a sample [`md-starter` project](https://github.com/kjhealy/md-starter) and an [`rmd-starter` project](https://github.com/kjhealy/rmd-starter). These are the skeletons of project folders for a paper written in Markdown (just an `.md` file, with no R) and a paper beginning life as an `.Rmd` file. The sample projects contain the basic starter file and a `Makefile` to produce `.html`, `.tex`, `.pdf` and `.docx` files.
+I write everything in Emacs, but as I hope is clear by now, that
+doesn't matter. Use whatever text editor you like and just learn the
+hell out of it. The
+[custom LaTeX style files](https://github.com/kjhealy/latex-custom-kjh)
+were originally put together to let me write nice-looking `.tex` files
+directly, but now they just do their work in the background. Pandoc
+will use them when it converts things to PDF. The heavy lifting is
+done by the
+[org-preamble-pdflatex.sty](https://github.com/kjhealy/latex-custom-kjh/tree/master/needs-org-mode)
+and
+[memoir-article-styles](https://github.com/kjhealy/latex-custom-kjh/tree/master/needs-memoir)
+files. If you install these files where LaTeX can find them---i.e., if
+you can compile a LaTeX document
+[based on this example](https://github.com/kjhealy/latex-custom-kjh/blob/master/templates/basic/article.tex)---then
+you are good to go. My
+[BibTeX master file](https://github.com/kjhealy/socbibs) is also
+available, but you will probably want to use your own, changing
+references to it in the templates as appropriate. Second, we have the
+custom pandoc stuff.
+[Here is the repository for that](https://github.com/kjhealy/pandoc-templates).
+Much of the material there is designed to go in the `~/.pandoc/`
+directory, which is where pandoc expects to find its configuration
+files. I have also set up a sample
+[`md-starter` project](https://github.com/kjhealy/md-starter) and an
+[`rmd-starter` project](https://github.com/kjhealy/rmd-starter). These
+are the skeletons of project folders for a paper written in Markdown
+(just an `.md` file, with no R) and a paper beginning life as an
+`.Rmd` file. The sample projects contain the basic starter file and a
+`Makefile` to produce `.html`, `.tex`, `.pdf` and `.docx` files.
 
 
 ```{#lst:yamlheader .sh caption="Markdown file with document metadata"}
@@ -41,7 +95,21 @@ elit, sed do eiusmod tempor incididunt ut labore et
 dolore magna aliqua [@fourcade13classsituat].
 ```
 
-Let's start with a straightforward markdown file---no R code yet, so nothing to the left of `article.md` line in @fig:workflow-diagram. The start of the sample `article-markdown.md` file is shown in @lst:yamlheader. The bit at the top is metadata, which pandoc understands. The HTML and LaTeX templates [in the pandoc-templates repository](https://github.com/kjhealy/pandoc-templates/tree/master/templates) are set up to use this metadata properly. Pandoc will take care of the citations directly. There is more than one way to have pandoc manage citations, but here we just use the most self-contained route. Simple documents can be contained in a single `.md` file. Documents including data analysis start life as `.Rmd` files which are then knitted into `.md` files and converted to PDF or HTML. At its simplest, a `mypaper.md` document can be converted to `mypaper.pdf` file by opening a terminal window and typing a command like the one in @lst:pandocsimple.
+Let's start with a straightforward markdown file---no R code yet, so
+nothing to the left of `article.md` line in @fig:workflow-diagram. The
+start of the sample `article-markdown.md` file is shown in
+@lst:yamlheader. The bit at the top is metadata, which pandoc
+understands. The HTML and LaTeX templates
+[in the pandoc-templates repository](https://github.com/kjhealy/pandoc-templates/tree/master/templates)
+are set up to use this metadata properly. Pandoc will take care of the
+citations directly. There is more than one way to have pandoc manage
+citations, but here we just use the most self-contained route. Simple
+documents can be contained in a single `.md` file. Documents including
+data analysis start life as `.Rmd` files which are then knitted into
+`.md` files and converted to PDF or HTML. At its simplest, a
+`mypaper.md` document can be converted to `mypaper.pdf` file by
+opening a terminal window and typing a command like the one in
+@lst:pandocsimple.
 
 ```{#lst:pandocsimple .sh caption="The simplest way to convert a Markdown file to PDF with pandoc"}
 pandoc mypaper.md -o mypaper.pdf
@@ -51,9 +119,36 @@ pandoc mypaper.md -o mypaper.pdf
 
 Because we will probably run commands like this a lot, it's convenient to automate them a little bit, and to add some extra bells and whistles to accommodate things we will routinely add to files, such as author information and other metadata, together with the ability to process bibliographic information and cross-references. These are handled by `pandoc` by turning on various switches in the command, and by ensuring a couple of external "filters" are present to manage the bibliographies and cross-references. Rather than type long commands out repeatedly, we will automate the process. This kind of automation is especially useful when our final output file might have a number of prerequisites before it can be properly produced, and we would like the computer to be a little bit smart about what needs to be re-processed and under what conditions. That way, for example, if a Figure has not changed we will not re-run the (possibly time-consuming) R script to create it again, unless we have to.
 
-We manage this process using a tool called [`make`](https://www.gnu.org/software/make/). Inside our project folder we put a plain-text `Makefile` that contains some rules governing how to produce a _target_ file that might have a number of _prerequisites_. In this case, a PDF or HTML file is the target, and the various figures and data tables are the prerequisites---if the code that produces the prerequisites changes, the final document will change too. `Make` starts from the final document and works backwards along the chain of prerequisites, re-compiling or re-creating them as needed. It's a powerful tool. For a good basic introduction, take a look at Karl Broman's "[Minimal Make](http://kbroman.org/minimal_make/)". (Incidentally, Karl Broman has [a number of tutorials and guides](http://kbroman.org/pages/tutorials) providing accurate and concise tours of many of the tools and topics described here, including [getting started with reproducible research](http://kbroman.org/steps2rr), [using git and GitHub](http://kbroman.org/github_tutorial), and [working with knitr](http://kbroman.org/knitr_knutshell).)
+We manage this process using a tool called
+[`make`](https://www.gnu.org/software/make/). Inside our project
+folder we put a plain-text `Makefile` that contains some rules
+governing how to produce a _target_ file that might have a number of
+_prerequisites_. In this case, a PDF or HTML file is the target, and
+the various figures and data tables are the prerequisites---if the
+code that produces the prerequisites changes, the final document will
+change too. `Make` starts from the final document and works backwards
+along the chain of prerequisites, re-compiling or re-creating them as
+needed. It's a powerful tool. For a good basic introduction, take a
+look at Karl Broman's
+"[Minimal Make](http://kbroman.org/minimal_make/)". (Incidentally,
+Karl Broman has
+[a number of tutorials and guides](http://kbroman.org/pages/tutorials)
+providing accurate and concise tours of many of the tools and topics
+described here, including
+[getting started with reproducible research](http://kbroman.org/steps2rr),
+[using git and GitHub](http://kbroman.org/github_tutorial), and
+[working with knitr](http://kbroman.org/knitr_knutshell).)
 
-Following Karl Broman's example, let's imagine that you have a paper, `paper.md` written in Markdown, that incorporates references to a figure, `fig1.pdf` generated by an R script, `fig1.r`. You could of course have an `.Rmd` file that produces the output, but there are situations where that isn't ideal. The end-point or target is the full article in PDF form. When the text of the paper changes in `paper.md`, then `paper.pdf` will have to be re-created. In the same way, when we change the content of `fig1.r` then `fig1.pdf` will need to be updated, and thus also `paper.pdf` will need to be re-created as well. Using `make` we can take care of the process. 
+Following Karl Broman's example, let's imagine that you have a paper,
+`paper.md` written in Markdown, that incorporates references to a
+figure, `fig1.pdf` generated by an R script, `fig1.r`. You could of
+course have an `.Rmd` file that produces the output, but there are
+situations where that isn't ideal. The end-point or target is the full
+article in PDF form. When the text of the paper changes in `paper.md`,
+then `paper.pdf` will have to be re-created. In the same way, when we
+change the content of `fig1.r` then `fig1.pdf` will need to be
+updated, and thus also `paper.pdf` will need to be re-created as well.
+Using `make` we can take care of the process.
 
 Here is what a basic `Makefile` for our example would look like:
 
@@ -69,13 +164,52 @@ fig1.pdf: fig1.r
 
 ```
 
-The big gotcha for `Makefiles` is that for no good reason they use the `<TAB>` key rather than spaces to indent the commands associated with rules. If you use spaces, `make` will not work. With the `Makefile` in @lst:makesimple, typing `make` at the command line will have make check the state of the final target (`makefile.pdf`) and all its dependencies. If the target isn't present, `make` will create it in accordance with the rules specified. If the target *is* present, `make` will check to see if any of its prerequisites have changed since it was last created. If so, it will recreate the file. The chain of prerequisites propagates backwards, so that if you change `fig1.r`, then `make` will notice and re-run it to create `fig1.pdf` before running the commands in the rule to create `mypaper.pdf`. You can also choose to just invoke single rules from the makefile, e.g. by typing `make fig1.pdf` instead of `make` at the command line. This will evaluate just the `fig1.pdf` rule and any associated prerequisites. 
+The big gotcha for `Makefiles` is that for no good reason they use the
+`<TAB>` key rather than spaces to indent the commands associated with
+rules. If you use spaces, `make` will not work. With the `Makefile` in
+@lst:makesimple, typing `make` at the command line will have make
+check the state of the final target (`makefile.pdf`) and all its
+dependencies. If the target isn't present, `make` will create it in
+accordance with the rules specified. If the target *is* present,
+`make` will check to see if any of its prerequisites have changed
+since it was last created. If so, it will recreate the file. The chain
+of prerequisites propagates backwards, so that if you change `fig1.r`,
+then `make` will notice and re-run it to create `fig1.pdf` before
+running the commands in the rule to create `mypaper.pdf`. You can also
+choose to just invoke single rules from the makefile, e.g. by typing
+`make fig1.pdf` instead of `make` at the command line. This will
+evaluate just the `fig1.pdf` rule and any associated prerequisites.
 
-For a simple example like this, make is mostly a minor convenience, saving you the trouble of typing a sequence of commands over and over to create your paper. However, it becomes very useful once you have projects with many documents and dependencies---for example, a dissertation consisting of separate chapters, each of which contains figures and tables, which in turn depend on various R scripts to set up and clean data. In those cases, `make` becomes a very powerful and helpful way of ensuring your final output really is up to date. 
+For a simple example like this, make is mostly a minor convenience,
+saving you the trouble of typing a sequence of commands over and over
+to create your paper. However, it becomes very useful once you have
+projects with many documents and dependencies---for example, a
+dissertation consisting of separate chapters, each of which contains
+figures and tables, which in turn depend on various R scripts to set
+up and clean data. In those cases, `make` becomes a very powerful and
+helpful way of ensuring your final output really is up to date.
 
-To deal with more complex projects and chains of prerequisites, `make` can make use of a number of variables to save you from (for example) typing out the name of every `figure-x.pdf` in your directory. 
+To deal with more complex projects and chains of prerequisites, `make`
+can make use of a number of variables to save you from (for example)
+typing out the name of every `figure-x.pdf` in your directory.
 
-The `Makefile` in the sample [`md-starter` project](https://github.com/kjhealy/md-starter) will convert any markdown files in the working directory to HTML, `.tex`, `.pdf`, or `.docx` files as requested. Typing `make html` at the command line will produce `.html` files from any `.md` files in the directory, for example. The PDF output (from `make pdf`) will look like this article, more or less. The different pieces of the `Makefile` define a few variables that specify the relationship between the different file types. In essence the rules say, for example, that all the PDF files in the directory depend on changes to an `.md` file with the same name; that the same is true of the HTML files in the directory, and so on. Then the  show the `pandoc` commands that generate the output files from the markdown input. The Makefile itself is shown in @lst:makefile makes use of a few variables as shorthand, as well as special variables like `$@` and `$<`, which mean "the name of the current target" and "the name of the current prerequisite", respectively.
+The `Makefile` in the sample
+[`md-starter` project](https://github.com/kjhealy/md-starter) will
+convert any markdown files in the working directory to HTML, `.tex`,
+`.pdf`, or `.docx` files as requested. Typing `make html` at the
+command line will produce `.html` files from any `.md` files in the
+directory, for example. The PDF output (from `make pdf`) will look
+like this article, more or less. The different pieces of the
+`Makefile` define a few variables that specify the relationship
+between the different file types. In essence the rules say, for
+example, that all the PDF files in the directory depend on changes to
+an `.md` file with the same name; that the same is true of the HTML
+files in the directory, and so on. Then the show the `pandoc` commands
+that generate the output files from the markdown input. The Makefile
+itself is shown in @lst:makefile makes use of a few variables as
+shorthand, as well as special variables like `$@` and `$<`, which mean
+"the name of the current target" and "the name of the current
+prerequisite", respectively.
 
 ```{#lst:makefile .bash caption="A more complicated Makefile"}
 ## Extension (e.g. md, markdown, mdown).
@@ -147,9 +281,28 @@ clean:
 .PHONY: clean
 ```
 
-Note that the `pandoc` commands are interpreted single lines of text, not several lines separated by the `<return>` key. But you can use the `\` symbol to tell `make` to continue to the next line without a break. With this Makefile,  typing `make pdf` would take all the `.md` files in the directory one at a time and run the pandoc command to turn each one into a PDF, using the [APSR](https://www.apsanet.org/utils/journal.cfm?Journal=APSR) reference style, my latex template, and a `.bib` file called `socbib-pandoc.bib`.
+Note that the `pandoc` commands are interpreted single lines of text,
+not several lines separated by the `<return>` key. But you can use the
+`\` symbol to tell `make` to continue to the next line without a
+break. With this Makefile, typing `make pdf` would take all the `.md`
+files in the directory one at a time and run the pandoc command to
+turn each one into a PDF, using the
+[APSR](https://www.apsanet.org/utils/journal.cfm?Journal=APSR)
+reference style, my latex template, and a `.bib` file called
+`socbib-pandoc.bib`.
 
-You shouldn't use this `Makefile` blindly. Take the time to learn how `make` works and how it can help your project. The [official manual](https://www.gnu.org/software/make/manual/) is pretty clear. Make's backward-looking chain of prerequisites can make it tricky to write rules for complex projects. When writing or inspecting a `Makefile` and its specific rules, it can be helpful to use the `--dry-run` switch, as in `make --dry-run`. This will print out the sequence of commands `make` would run, but without actually executing them. You can try this with the `Makefile` in @lst:makefile in a directory with at least one `.md` file in it. For example, look at the commands produced by `make pdf --dry-run` or `make docx --dry-run` or `make clean --dry-run`. 
+You shouldn't use this `Makefile` blindly. Take the time to learn how
+`make` works and how it can help your project. The
+[official manual](https://www.gnu.org/software/make/manual/) is pretty
+clear. Make's backward-looking chain of prerequisites can make it
+tricky to write rules for complex projects. When writing or inspecting
+a `Makefile` and its specific rules, it can be helpful to use the
+`--dry-run` switch, as in `make --dry-run`. This will print out the
+sequence of commands `make` would run, but without actually executing
+them. You can try this with the `Makefile` in @lst:makefile in a
+directory with at least one `.md` file in it. For example, look at the
+commands produced by `make pdf --dry-run` or `make docx --dry-run` or
+`make clean --dry-run`.
 
 The particular steps needed for many projects may be quite simple, and
 not require the use of any variables or other frills. If you find
@@ -158,7 +311,26 @@ a document (e.g. cleaning data; running preliminary code; producing
 figures; assembling a final document) then `make` can do a lot to
 automate the process.
 
-The examples directory [includes](https://github.com/kjhealy/pandoc-templates/blob/master/examples/article-knitr.Rmd) a sample `.Rmd` file. The code chunks in the file provide examples of how to generate tables and figures in the document. In particular they show some useful options that can be passed to knitr. [Consult the `knitr` project page](http://yihui.name/knitr/) for extensive documentation and many more examples. To produce output from the `article-knitr.Rmd` file, you could of course launch R in the working directory, load `knitr`, and process the file. This produces the `article-knitr.md` file, together with some graphics in the `figures/` folder (and some working files in the `cache/` folder). We set things up in the `.Rmd` file so that `knitr` produces both PNG and PDF versions of whatever figures are generated by R. That prepares the way for easy conversion to HTML and LaTeX. Once the `article-knitr.md` file is produced, HTML, `.tex`, and PDF versions of it can be produced as before, by typing `make` at the command line. But of course there's no reason `make` can't automate that first step, too. The [`rmd-starter` project](http://github.com/kjhealy/rmd-starter) has a sample `Makefile` that begins with the `.Rmd` files in the directory and produces the outputs from there.
+The examples directory
+[includes](https://github.com/kjhealy/pandoc-templates/blob/master/examples/article-knitr.Rmd)
+a sample `.Rmd` file. The code chunks in the file provide examples of
+how to generate tables and figures in the document. In particular they
+show some useful options that can be passed to knitr.
+[Consult the `knitr` project page](http://yihui.name/knitr/) for
+extensive documentation and many more examples. To produce output from
+the `article-knitr.Rmd` file, you could of course launch R in the
+working directory, load `knitr`, and process the file. This produces
+the `article-knitr.md` file, together with some graphics in the
+`figures/` folder (and some working files in the `cache/` folder). We
+set things up in the `.Rmd` file so that `knitr` produces both PNG and
+PDF versions of whatever figures are generated by R. That prepares the
+way for easy conversion to HTML and LaTeX. Once the `article-knitr.md`
+file is produced, HTML, `.tex`, and PDF versions of it can be produced
+as before, by typing `make` at the command line. But of course there's
+no reason `make` can't automate that first step, too. The
+[`rmd-starter` project](http://github.com/kjhealy/rmd-starter) has a
+sample `Makefile` that begins with the `.Rmd` files in the directory
+and produces the outputs from there.
 
 [^commandline]: Here's how. Open a terminal window and type `xcode-select --install`. You can install `pandoc` and many other tools using the [Homebrew package manager](http://brew.sh).
 
