@@ -199,7 +199,7 @@ convert any markdown files in the working directory to HTML, `.tex`,
 `.pdf`, or `.docx` files as requested. Typing `make html` at the
 command line will produce `.html` files from any `.md` files in the
 directory, for example. The PDF output (from `make pdf`) will look
-like this article, more or less. The different pieces of the
+like [this article](http://kieranhealy.org/files/papers/plain-person-text.pdf), more or less. The different pieces of the
 `Makefile` define a few variables that specify the relationship
 between the different file types. In essence the rules say, for
 example, that all the PDF files in the directory depend on changes to
