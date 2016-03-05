@@ -309,7 +309,7 @@ not require the use of any variables or other frills. If you find
 yourself repeatedly running the same sequence of commands to assemble
 a document (e.g. cleaning data; running preliminary code; producing
 figures; assembling a final document) then `make` can do a lot to
-automate the process.
+automate the process. For further examples of `Makefiles` doing things relevant to data analysis, see [Lincoln Mullen's discussion](http://lincolnmullen.com/blog/makefiles-for-ocr-and-converting-shapefiles) of the things he uses `make` to manage.
 
 The examples directory
 [includes](https://github.com/kjhealy/pandoc-templates/blob/master/examples/article-knitr.Rmd)

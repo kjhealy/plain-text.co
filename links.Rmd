@@ -37,6 +37,7 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [Rmarkdown documentation](http://rmarkdown.rstudio.com) from the makers of RStudio. Lots of good examples.
 - [Plain Person's Guide](http://github.com/kjhealy/plain-text.co) The git repository for this project.
 - [Karl Broman's Tutorials and Guides](http://kbroman.org/pages/tutorials) Accurate and concise guides to many of the tools and topics described here, including [getting started with reproducible research](http://kbroman.org/steps2rr), [using git and GitHub](http://kbroman.org/github_tutorial), and [working with knitr](http://kbroman.org/knitr_knutshell).
+- [Makefiles for OCR and converting Shapefiles](http://lincolnmullen.com/blog/makefiles-for-ocr-and-converting-shapefiles). Some further examples of `Makefiles` in the data-analysis pipeline, by [Lincoln Mullen](http://lincolnmullen.com)
     
 # Paid Applications and Services
 - [Backblaze](http://backblaze.com). Secure off-site backup.
