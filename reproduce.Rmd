@@ -31,7 +31,7 @@ respect. Hadley Wickham's
 [R Style Guide](http://adv-r.had.co.nz/Style.html) provides some
 useful guidelines about writing readable code. The R package
 [lintr](https://github.com/jimhester/lintr) implements these
-principles---it acts like a copy-editor for your code. In Emacs you an
+principles---it acts like a copy-editor for your code. In Emacs you can
 use `lintr` automatically through a tool called [flycheck](https://github.com/flycheck/flycheck). 
 
 You should also try not to repeat yourself when you write your code. A
