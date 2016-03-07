@@ -8,7 +8,7 @@ CSL = apsa
 HTML_FILES := $(patsubst %.Rmd, %.html ,$(wildcard *.Rmd))
 
 
-all: clean deploy
+all: deploy
 
 html: $(HTML_FILES)
 
@@ -26,6 +26,7 @@ public: html
 	cp styles.css public/
 	cp -r libs public/
 	cp -r figures public/
+	cp favicon.ico public/
 	find public -type d -print0 | xargs -0 chmod 755
 	find public -type f -print0 | xargs -0 chmod 644
 
