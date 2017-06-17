@@ -19,7 +19,7 @@ html_document:
   css: styles.css
 
 bookdown::tufte_html_book:
-  pandoc_args: ["--csl=/Users/kjhealy/.pandoc/csl/apsa.csl",
+  pandoc_args: ["--filter", "pandoc-crossref", "--csl=/Users/kjhealy/.pandoc/csl/apsa.csl",
   "--bibliography=/Users/kjhealy/Documents/bibs/socbib-pandoc.bib",
   "--top-level-division=chapter"]
   split_by: chapter

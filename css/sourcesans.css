@@ -163,3 +163,7 @@ subtitle { font-style: italic;
 .appendix {
     color: #888888;
 }
+
+.sidenote-number {
+    font-family: "source-sans-pro", Arial, Helvetica, sans-serif;
+}

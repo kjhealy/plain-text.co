@@ -105,10 +105,11 @@ are much more extensive markup languages, but Markdown was meant to be
 simple. Over the years it has become a *de facto* standard. Text
 editors and note-taking applications support it, and tools exist to
 convert Markdown not just into HTML (its original target output
-format) but many other document types as well. @lst:markdown-example
-shows the markdown source for this paragraph and its subheading.
+format) but many other document types as well. @lst:markdown
+shows the markdown source for part of this document.
 
-```{#lst:markdown-example .markdown caption="The Markdown source for a nearby part of this document."}
+
+```{#lst:markdown .markdown caption="The Markdown source for a nearby part of this document."}
 
 # Use Markdown
 
@@ -129,7 +130,7 @@ format) but many other document types as well. @lst:markdown-example shows
 the markdown source for this paragraph and its subheading.
 ```
 
-The excerpt shown in @lst:markdown-example shows a few of the most
+The excerpt shown in @lst:markdown shows a few of the most
 common Markdown conventions, most notably how it represents headings
 and subheadings (a `#` symbol for a top-level header, with `##` for
 the next level down, and so on), how it represents hyperlinks, and how
@@ -148,8 +149,7 @@ references. Read
 [Pandoc's documentation for more details](http://pandoc.org/README.html#citations)
 about citations. At the end of the excerpt you can also see that the
 code listing is labeled with `@lst:markdown-example`, for example. A
-Pandoc filter named
-[`pandoc-crossref`](https://github.com/lierdakil/pandoc-crossref)
+Pandoc filter named [`pandoc-crossref`](https://github.com/lierdakil/pandoc-crossref)
 extends this `@label` convention to deal with labeled Figures, Tables,
 and so on. Using Markdown in this way means you do not have to worry
 whether your reference list is complete, or whether cross-references

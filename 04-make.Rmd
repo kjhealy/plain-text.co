@@ -97,11 +97,13 @@ dolore magna aliqua [@fourcade13classsituat].
 ```
 
 Let's start with a straightforward markdown file---no R code yet, so
-nothing to the left of `article.md` line in Figure \@ref(fig:workflowdiagram). The
-start of the sample `article-markdown.md` file is shown in Listing \@ref(lst:yamlheader). The bit at the top is metadata, which pandoc
-understands. The HTML and LaTeX templates
-[in the pandoc-templates repository](https://github.com/kjhealy/pandoc-templates/tree/master/templates)
-are set up to use this metadata properly. Pandoc will take care of the
+nothing to the left of `article.md` line in Figure
+\@ref(fig:workflowdiagram). The start of the sample
+`article-markdown.md` file is shown in @lst:yamlheader. The bit at the
+top is metadata, which pandoc understands. The HTML and LaTeX
+templates
+[in the pandoc-templates repository](https://github.com/kjhealy/pandoc-templates/tree/master/templates) are
+set up to use this metadata properly. Pandoc will take care of the
 citations directly. There is more than one way to have pandoc manage
 citations, but here we just use the most self-contained route. Simple
 documents can be contained in a single `.md` file. Documents including
@@ -206,7 +208,7 @@ example, that all the PDF files in the directory depend on changes to
 an `.md` file with the same name; that the same is true of the HTML
 files in the directory, and so on. Then the show the `pandoc` commands
 that generate the output files from the markdown input. The Makefile
-itself is shown in @lst:makefile makes use of a few variables as
+itself is shown in Listing @lst:makefile makes use of a few variables as
 shorthand, as well as special variables like `$@` and `$<`, which mean
 "the name of the current target" and "the name of the current
 prerequisite", respectively.
