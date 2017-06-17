@@ -1,8 +1,8 @@
 ---
-title: "Reproducing Work"
+title: "Reproduce Work"
 ---
 
-# Reproducing Work
+# Reproduce Work
 
 ## Minimize Error 
 

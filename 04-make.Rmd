@@ -1,10 +1,10 @@
 ---
-title: "Making it" 
+title: "Pull it Together" 
 crossrefYaml: "./pandoc-crossref-settings.yaml"  
 ---
 
 
-# Pulling it Together 
+# Pull it Together 
 
 We write papers. Those papers cite books and articles. They often
 incorporate tables and figures created in
