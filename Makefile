@@ -16,6 +16,21 @@ html: $(HTML_FILES)
 	R --slave -e "set.seed(100);rmarkdown::render('$<')"
 	proc-panweb.sh $@
 
+tufte: 
+	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_html_book')"
+	cp -r assets/envision/css _book/
+	cp -r assets/envision/js _book/
+	cp -r assets/envision/font _book/
+	cp assets/pushy/css/normalize.css _book/css
+	cp assets/toc.css _book/css/toc.css
+	cp assets/css/sourcesans.css _book/css/sourcesans.css
+	cp assets/css/tufte.css _book/libs/tufte-css-2015.12.29/
+	cd _book && perl -p -i -e 's/oORLOo/<code>/g' *.html
+	cd _book && perl -p -i -e 's/oORROo/<\/code>/g' *.html
+	cd _book && perl -p -i -e 's/<div class="sourceCode">/<p class="sourceCode">/g' *.html
+	cd _book && perl -p -i -e 's/<\/pre><\/div>/<\/pre><\/p>/g' *.html
+
+
 clean:
 	$(RM) $(HTML_FILES)
 

@@ -4,7 +4,6 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 ---
 
 
-
 # Pulling it Together 
 
 We write papers. Those papers cite books and articles. They often
@@ -19,9 +18,11 @@ want to do that with an absolute minimum of---ideally,
 *no*---post-processing of the output beyond the basic conversion step.
 This is within our reach.
 
-![A plain-text document toolchain.](figures/workflow-wide.png){#fig:workflow-diagram}
+```{r workflowdiagram, fig.cap='A plain-text document toolchain.', echo=FALSE, out.width="100%", fig.fullwidth=TRUE}
+knitr::include_graphics("figures/workflow-wide.png")
+```
 
-A sample document flow is shown in @fig:workflow-diagram. I promise it
+A sample document flow is shown in Figure \@ref(fig:workflowdiagram). I promise it
 is less insane than it appears. Describing it all at once might make
 it sound a little crazy. But, at bottom, there are just two separable
 pieces. First, `knitr` converts `.Rmd` files to `.md` files. Second,
@@ -96,9 +97,8 @@ dolore magna aliqua [@fourcade13classsituat].
 ```
 
 Let's start with a straightforward markdown file---no R code yet, so
-nothing to the left of `article.md` line in @fig:workflow-diagram. The
-start of the sample `article-markdown.md` file is shown in
-@lst:yamlheader. The bit at the top is metadata, which pandoc
+nothing to the left of `article.md` line in Figure \@ref(fig:workflowdiagram). The
+start of the sample `article-markdown.md` file is shown in Listing \@ref(lst:yamlheader). The bit at the top is metadata, which pandoc
 understands. The HTML and LaTeX templates
 [in the pandoc-templates repository](https://github.com/kjhealy/pandoc-templates/tree/master/templates)
 are set up to use this metadata properly. Pandoc will take care of the
@@ -115,7 +115,7 @@ opening a terminal window and typing a command like the one in
 pandoc mypaper.md -o mypaper.pdf
 ```
 
-# Automation with `make`
+## Automation with `make`
 
 Because we will probably run commands like this a lot, it's convenient to automate them a little bit, and to add some extra bells and whistles to accommodate things we will routinely add to files, such as author information and other metadata, together with the ability to process bibliographic information and cross-references. These are handled by `pandoc` by turning on various switches in the command, and by ensuring a couple of external "filters" are present to manage the bibliographies and cross-references. Rather than type long commands out repeatedly, we will automate the process. This kind of automation is especially useful when our final output file might have a number of prerequisites before it can be properly produced, and we would like the computer to be a little bit smart about what needs to be re-processed and under what conditions. That way, for example, if a Figure has not changed we will not re-run the (possibly time-consuming) R script to create it again, unless we have to.
 
@@ -334,6 +334,3 @@ and produces the outputs from there.
 
 [^commandline]: Here's how. Open a terminal window and type `xcode-select --install`. You can install `pandoc` and many other tools using the [Homebrew package manager](http://brew.sh).
 
-**Next: [An Emacs Starter Kit](http://plain-text.co/esk.html)  →**
-
-**← Previous: [Reproducing Your Work](http://plain-text.co/reproduce.html)**

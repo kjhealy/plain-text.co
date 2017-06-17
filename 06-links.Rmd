@@ -4,11 +4,11 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 ---
 
 
+# Links to Other Resources
 
 
 
-
-# Basic Tools
+## Basic Tools
 - [Apple's Developer Tools](https://developer.apple.com/library/ios/technotes/tn2339/_index.html) Unix toolchain. Install directly with `xcode-select --install`, or just try to use e.g. `git` from the terminal and have OS X prompt you to install the tools.
 - [Homebrew package manager](http://brew.sh). A convenient way to install several of the tools here, including Emacs and Pandoc.
 - [Emacs](http://www.gnu.org/software/emacs/). A powerful text editor. Ready-to-go Mac version at [Emacs for Mac OS X](http://emacsformacosx).
@@ -22,14 +22,14 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [GNU Make](http://www.gnu.org/software/make). You tell `make` what the steps are to create the pieces of a document or program. As you edit and change the various pieces, it automatically figures out which pieces need to be updated and recompiled, and issues the commands to do that. See Karl Broman's [Minimal Make](http://kbroman.org/minimal_make/) for a short introduction. Make will be installed automatically with Apple's developer tools.
 - [lintr](https://github.com/jimhester/lintr) and [flycheck](https://github.com/flycheck/flycheck). Tools that nudge you to write neater code.
 
-# Helpers and Templates
+## Helpers and Templates
 - [Emacs Starter Kit for the Social Sciences](http://kjhealy.github.com/emacs-starter-kit/). Set Emacs up to use many of the tools described in this guide.
 - [Pandoc Templates](https://github.com/kjhealy/pandoc-templates). LaTeX and HTML templates, together with Pandoc configuration files and other things needed to produce good-looking PDF, HTML, and Word documents from plain text sources using Pandoc.
 - [`md-starter` project](https://github.com/kjhealy/md-starter) and [`rmd-starter` project](https://github.com/kjhealy/rmd-starter). Assuming you have the tools and Pandoc/LaTeX templates installed, these skeleton project folders contain a basic `.md` or `.rmd` starter file and a `Makefile` to produce `.html`, `.tex`, `.pdf` and `.docx` files as described in this guide.
 - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) An overview of Markdown and RMarkdown conventions.
 - [RStudio Cheatsheets](https://rstudio.com/resources/cheatsheets/) Other quick guides, including a more comprehensive RMarkdown reference and a information about using RStudio's IDE, and some of the main tools in R.
 
-# Guides
+## Guides
 
 - [R Style Guide](http://adv-r.had.co.nz/Style.html). Write readable code. 
 - [Jenny Bryan's Stat 545](http://stat545-ubc.github.io/topics.html). Notes and tutorials for a Data Analysis course taught by [Jennifer Bryan](http://www.stat.ubc.ca/~jenny/) at the University of British Columbia. Lots of useful material.
@@ -39,7 +39,7 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [Karl Broman's Tutorials and Guides](http://kbroman.org/pages/tutorials) Accurate and concise guides to many of the tools and topics described here, including [getting started with reproducible research](http://kbroman.org/steps2rr), [using git and GitHub](http://kbroman.org/github_tutorial), and [working with knitr](http://kbroman.org/knitr_knutshell).
 - [Makefiles for OCR and converting Shapefiles](http://lincolnmullen.com/blog/makefiles-for-ocr-and-converting-shapefiles). Some further examples of `Makefiles` in the data-analysis pipeline, by [Lincoln Mullen](http://lincolnmullen.com)
     
-# Paid Applications and Services
+## Paid Applications and Services
 - [Backblaze](http://backblaze.com). Secure off-site backup.
 - [Crashplan](http://crashplan.com). Secure off-site backup.
 - [GitHub](http://github.com). Host public Git repositories for free. Pay to host private ones. Also a source for publicly available code (e.g. R packages and utilities) written by other people.
@@ -47,5 +47,3 @@ crossrefYaml: "./pandoc-crossref-settings.yaml"
 - [Sublime Text](http://sublimetext.com). Python-based text editor.
 - [Zotero](http://zotero.org), [Mendeley](http://mendeley.com), and [Papers](http://papersapp.com) are citation managers that incorporate PDF storage, annotation and other features. Zotero is free to use. Mendeley has a premium tier. Papers is a paid application after a trial period. I don't use these tools much, but that's not for any strong principled reason---mostly just intertia. If you use one and want to integrate with the material here, just make sure it can export to BibTeX/BibLaTeX files. Papers, which I've used most recently, can handily output citation keys in pandoc's format amongst several others.
 
-
-**← Previous: [Alternatives](http://plain-text.co/pros.html)**

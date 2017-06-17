@@ -2,11 +2,15 @@
 title: "Do I have to use this stuff?"
 ---
 
-![How to Draw an Owl](figures/draw-owl.jpg){#fig:owl}
+# Do I Have To Use This Stuff?
+
+```{r owl, fig.cap='How to Draw an Owl.', echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/draw-owl.jpg")
+```
 
 > Installation/setup/whatever is always harder and much more poorly documented than mere usage --- [Jenny's Law](https://twitter.com/JennyBryan/status/699462966282858500)
 
-# Why Bother, Again?
+## Why Bother, Again?
 
 Running your data analysis in R, writing documents in Markdown or
 RMarkdown, doing both inside Emacs, processing them with `pandoc`,
@@ -64,7 +68,7 @@ some of the principles discussed here when it comes to tracking
 changes to documents and managing the code and output of your data
 analysis.
 
-# But Alternatives Might Be Better for You
+## But Alternatives Might Be Better for You
 
 There are many other applications you might put at the center of your
 workflow, depending on need, personal preference, willingness to pay
@@ -74,7 +78,7 @@ quality editors include
 [BBEdit](http://www.barebones.com/products/bbedit/index.shtml)
 (beloved of many web developers, but with relatively little support
 for R beyond syntax highlighting), and
-[TextMate 2](http://macromates.com/download) (shown in @fig:tm). On
+[TextMate 2](http://macromates.com/download) (shown in Figure \@ref(fig:tm). On
 Linux, the standard alternative to Emacs is
 [vi](http://www.eng.hawaii.edu/Tutor/vi.html) or
 [Vim](http://www.vim.org/), but there are many others. For Windows
@@ -85,7 +89,11 @@ there is [Textpad](http://www.textpad.com/),
 many others. Most of these applications have strong support for LaTeX
 and some also have good support for statistics programming.
 
-![Part of an R file being edited in TextMate.](figures/TextMate.png){#fig:tm}
+
+```{r tm, fig.cap='Part of an R file being edited in TextMate.', echo=FALSE, out.width="100%", fig.fullwidth=TRUE}
+knitr::include_graphics("figures/TextMate.png")
+```
+
 
 [Sublime Text 3](http://www.sublimetext.com/) is a cross-platform text
 editor under active development, and with an increasingly large user
@@ -100,7 +108,7 @@ costs \$70.
 For a different approach to working with R---and as repeatedly noted
 throughout this guide---you should consider
 [RStudio](http://www.rstudio.com). A screenshot is shown in
-@fig:rstudio. Although it appears quite late in this discussion, it
+Figure \@ref(fig:rstudio). Although it appears quite late in this discussion, it
 might well be your first choice. I use it when teaching. It is not a
 text editor but rather an "IDE", an integrated development
 environment. Your code and figures, together with an R console,
@@ -114,7 +122,9 @@ easily. It is the easiest way by far to get into using R, and provides
 a straightforward way to manage many of the tools already discussed
 here.
 
-![RStudio running on Windows.](figures/rstudio.png){#fig:rstudio}
+```{r rstudio, fig.cap='RStudio running on Windows.', echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/rstudio.png")
+```
 
 For statistical analysis in the social sciences, the main alternative
 to R is [Stata](http://www.stata.com/). Stata is not free, but like R
@@ -148,7 +158,7 @@ control is likely to become more widely available through intermediary
 services or even as part of the basic functionality of operating
 systems.
 
-# A Broader Perspective
+## A Broader Perspective
 
 It would be nice if all you needed to do your work was a box software
 of software tricks and shortcuts. But of course it's a bit more
@@ -205,7 +215,3 @@ broke. It never did.
     Devil](http://mph.puddingbowl.org/2010/02/org-mode-in-your-pocket-is-a-gnu-shaped-devil/)"
     makes this point very well.
 
-
-**Next: [Links to Other Resources](http://plain-text.co/links.html)  →**
-
-**← Previous: [An Emacs Starter Kit](http://plain-text.co/esk.html)**

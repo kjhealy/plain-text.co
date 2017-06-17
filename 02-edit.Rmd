@@ -3,7 +3,9 @@ title: "Write"
 crossrefYaml: "./pandoc-crossref-settings.yaml"
 ---
 
-# Edit Text in a Text Editor
+# Write and Edit 
+
+## Use a Text Editor
 
 If you are going to be doing quantitative analysis of any kind then
 you should write using a good text editor. The same can be said, I'd
@@ -13,8 +15,7 @@ from word processors. Unlike applications such as Microsoft Word, text
 editors generally don't make a big effort to make what you write look
 like as though it is being written on a printed page.[^3] Instead, they
 focus on working with text efficiently, while keeping it in a plain
-and portable format, as opposed to binary file formats like `.docx`.
-@fig:emacstext shows an example. 
+and portable format, as opposed to binary file formats like `.docx`. Figure \@ref(fig:emacstext) shows an example. 
 
 Text editors can also help you where word processors are not much use.
 If you are writing code to do some statistical analysis, for instance,
@@ -37,7 +38,9 @@ figures, and cross-references and other paraphernalia. The best
 editors can closely integrate with the tools you use to do the various
 pieces of your work.
 
-![Working on part of this document in Emacs.](figures/emacs-texted.png){#fig:emacstext}
+```{r emacstext, fig.cap='Working on part of this document in Emacs.', echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/emacs-texted.png")
+```
 
 Emacs is a text editor, in the same way the blue whale is a mammal. It
 does the things I have just described, and rather more besides, if you
@@ -86,7 +89,7 @@ Similarly, when doing data analysis with R, you may just want to use
 the [RStudio environment](http://rstudio.com). You will do fine if you
 go with these alternatives.
 
-# Use Markdown 
+## Use Markdown 
 
 When you write papers in plain text, how do you manage the formatting,
 sectioning, and other related aspects of your document?
@@ -153,7 +156,7 @@ whether your reference list is complete, or whether cross-references
 (to 'Figure 3' for example) remain correct after you move things
 around in your text.
 
-# Use R with ESS or RStudio
+## Use R with ESS or RStudio
 
 You will probably be doing some---perhaps a great deal---of
 quantitative data analysis. R is an environment for statistical
@@ -170,14 +173,16 @@ with the [RStudio IDE](http://rstudio.com). You can download R from
 [The R Project Homepage](http://www.r-project.org/).
 
 R can be used directly within Emacs by way of a package called ESS
-(for "Emacs Speaks Statistics"). As shown in @fig:ess, it allows you
+(for "Emacs Speaks Statistics"). As shown in Figure \@ref(fig:ess), it allows you
 to work with your code in one Emacs frame and a live R session in
 another right beside it. Because everything is inside Emacs, it is
 easy to do things like send a chunk of your code over to R using a
 keystroke. This is a very efficient way of doing interactive data
 analysis while building up code you can use again in future.
 
-![Working with R in Emacs using ESS. A document containing R code (`apple.r`) is open in the top half of the screen. Below the divider, an R session is running, also inside Emacs. Code from the top pane is sent to the bottom with a keyboard shortcut, where it is evaluated by R. We can also jump down to the bottom pane and do work there. Small details like a lint checker, active line highlighting, and revision-control information are also visible.](figures/emacs-ess-2016.png){#fig:ess}
+```{r ess, fig.cap='Working with R in Emacs using ESS. A document containing R code is open in the top half of the screen. Below the divider, an R session is running, also inside Emacs. Code from the top pane is sent to the bottom with a keyboard shortcut, where it is evaluated by R. We can also jump down to the bottom pane and do work there. Small details like a lint checker, active line highlighting, and revision-control information are also visible.', echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/emacs-ess-2016.png")
+```
 
 You'll present your results in papers, but also in talks where you
 will likely use some kind of presentation software. You can use
@@ -197,11 +202,4 @@ from plain text documents.[^4]
     the scope of this discussion. Suffice to say that there is plenty of
     good advice available via Google, and you should pay attention to
     it.
-
-**Next: [Reproducing Your Work](http://plain-text.co/reproduce.html) →**
-
-**← Previous: [Keep a Record of Your Work](http://plain-text.co/record.html)**
-
-
-# References
 

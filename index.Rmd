@@ -3,11 +3,15 @@ title: "The Plain Person's Guide to Plain Text Social Science"
 crossrefYaml: "./pandoc-crossref-settings.yaml"
 ...
 
+# Introduction 
+
 - Get the guide [as a single PDF file](http://kieranhealy.org/files/papers/plain-person-text.pdf).
 - Change the `.html` extension to `.Rmd` to see the plain-text source of any page. 
 - Take a look at the [github repository](http://github.com/kjhealy/plain-text.co) for the project.
 
-![A plain-text document toolchain.](figures/workflow-wide.png){#fig:workflow-diagram}
+```{r workflow-diagram, fig.cap='A plain-text document toolchain.', echo=FALSE, out.width="100%", fig.fullwidth=TRUE}
+knitr::include_graphics("figures/workflow-wide.png")
+```
 
 As a beginning graduate student in the social sciences, what sort of software should you use to do your work? More importantly, what principles should guide your choices? These pages offer some answers. The short version is: you should use tools that give you *more control* over the process of data analysis and writing. I recommend you write prose and code using a good text editor; analyze quantitative data with R or Stata; minimize error by storing your work in a simple format (plain text is best), and make a habit of documenting what you've done. For data analysis, consider using a format like RMarkdown and tools like Knitr to make your work more easily reproducible for your future self. Use Pandoc to turn your plain-text documents into PDF, HTML, or Word files to share with others. Keep your projects in a version control system. Back everything up regularly. Make your computer work for you by automating as many of these steps as you can. 
 
@@ -15,13 +19,13 @@ To help you get started, I provide a drop-in set of useful defaults to get start
 
 The rest of this page tries to provide some motivation for why you should care about having better control over your work materials. Rather than dive straight in to describing various tools or recapitulating their manuals, on this page and in the other parts of this guide I want to encourage you to begin thinking about this issue in a way that will lead you to some solution that works well for you---maybe the specific ones described here, but maybe not.
 
-# Introduction 
+## Motivation
 
 You can do productive, maintainable and reproducible work with all kinds of different software set-ups. This is the main reason I don't go around encouraging everyone to convert to the applications I use. (My rule is that I don't try to persuade anyone to switch if I can't commit to offering them technical support during and after their move.) So this discussion is not geared toward convincing you there is One True Way to organize things. I do think, however, that if you're in the early phase of your career as a graduate student in, say, Sociology, or Economics, or Political Science, you should give some thought to how you're going to organize and manage your work.[^1] This is so for two reasons. First, the transition to graduate school is a good time to make changes. Early on, there's less inertia and cost associated with switching things around than there will be later. Second, in the social sciences, text and data management skills are usually not taught to students explicitly. This means that you may end up adopting the practices of your advisor or mentor, continue to use what you are taught in your methods classes, or just copy whatever your peers are doing. Following these paths may lead you to an arrangement that you will be happy with. But maybe not. It's worth looking at the options.
 
 Two remarks at the outset. First, because this discussion is aimed at beginning students, some readers may find much with which they are already familiar. Second, although in what follows I advocate you take a look at several applications in particular, it's not really about the gadgets or utilities. The Zen of Organization is not to be found in Fancy Software. Nor shall the true path of Getting Things Done be revealed to you through the purchase of a nice [Moleskine Notebook](http://www.moleskineus.com/). Instead, it lies within---unfortunately.
 
-# Two Revolutions in Computing
+## Two Revolutions in Computing
 
 When talking to undergraduates or graduate students on this topic, and when teaching classes that use these tools, I increasingly run into the problem that it's hard to get started without backing up a bit first in order to talk about how the computer they are using works. I think the reason for this is the rise of the flat-screen, touch-based model of computing, most obviously on phones and then very secondarily on things like Apple's iPad or Microsoft's Surface tablet. Now, most people who need to write long documents (like papers or dissertations) or work in an involved way with data do not use a tablet as their primary device. But it does seem clear that some kind of touch-screen interaction is the future of computing for most people. Indeed, once you consider phones properly you realize it's the _present_ of computing for most people. 
 
@@ -34,7 +38,7 @@ The tension is that, increasingly, people---people like the target audience of t
 [^multit]: As opposed to multi-tasking in the less-interesting sense of trying to pay attention to a number of discrete tasks (writing, email, calendar, web-browsing), each controlled by a separate application.
 
 
-# What's the Problem?
+## What's the Problem?
 
 The problem is that doing scholarly work is intrinsically a mess. There's the annoying business of getting ideas and writing them down, of course, but also everything before, during, and around it: data analysis and all that comes with it, and the tedious but unavoidable machinery of scholarly papers---especially citations and references. There is a lot of keep track of, a lot to get right, and a lot to draw together at the time of writing. Academic papers are by no means the only form of writing subject to constraints of this sort. Consider [this sensible discussion](http://www.leancrew.com/all-this/2013/12/a-free-distraction/) by Dr. Drang, a (pseudonymous) consulting engineer:
 
@@ -46,7 +50,7 @@ The problem is that doing scholarly work is intrinsically a mess. There's the an
 
 A lot of academic writing is just like this. It can be tricky to manage. It's even worse when you have collaborators and other contributors. So, what to do?
 
-# The Office Model and the Engineering Model 
+## The Office Model and the Engineering Model 
 
 Let me make a crude distinction. There are "Office Type" solutions to this problem, and there are "Engineering Type" solutions. Don't get hung up on the distinction or the labels. Office solutions tend towards a cluster of tools where something like Microsoft Word is at the center of your work. A Word file or set of files is the most "real" thing in your project. Changes to your work are tracked inside that file or files. Citation and reference managers plug into them. The outputs of data analyses---tables, figures---get dropped into them or kept alongside them. The master document may be passed around from person to person or edited and updated in turn. The final output is exported from it, perhaps to PDF or to HTML, but maybe most often the final output just *is* the `.docx` file, cleaned up and with the track changes feature turned off.
 
@@ -55,8 +59,6 @@ In the Engineering model, meanwhile, plain text files are at the center of your 
 This distinction is meant to capture a tendency in organization, not a rigid divide---still less a sort of personality. Obviously it is possible organize things on the Office model. (Indeed, it's the dominant way.) Applications like [Scrivener](http://www.literatureandlatte.com), meanwhile, combine elements of the two approaches. Scrivener embraces the "bittyness" of large writing projects in an effective way, and can spit out clean copy in a variety of formats. Scrivener is built for people writing lengthy fiction (or qualitative non-fiction) rather than anything with quantitative data analysis, so I have never used it extensively. Microsoft Word, meanwhile, still rules large swathes of the Humanities and the Social Sciences, and the production process of many publishers. So even if you prefer plain text for other reasons---especially in connection with project management and data analysis---the routine need or obligation to provide a Word document to someone is one of the main reasons to want to be able to easily convert things. HTML is a great lingua franca.
 
 This article is mostly about the Engineering model. But many people use the Office model, and you may end up working with (or for) some of them. In those cases, it is generally easier for you to use their software than *vice versa*, if only because you are likely have a copy of Word on your computer already. In these circumstances you might also  collaborate using Google Docs or some other service that allows for simultaneously editing the master copy of a document. This may not be ideal, but it is better than not collaborating. There is little to be gained from plain-text dogmatism in a `.docx` world.
-
-**Next: [Keep a Record of Your Work](http://plain-text.co/record.html) → **
 
 
 [^1]: This may also be true if you are about to move from being a
