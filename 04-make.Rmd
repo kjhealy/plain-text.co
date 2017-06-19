@@ -103,8 +103,27 @@ nothing to the left of `article.md` line in Figure
 top is metadata, which pandoc understands. The HTML and LaTeX
 templates
 [in the pandoc-templates repository](https://github.com/kjhealy/pandoc-templates/tree/master/templates) are
-set up to use this metadata properly. Pandoc will take care of the
-citations directly. There is more than one way to have pandoc manage
+set up to use this metadata properly. 
+
+For scholarly work, efficient management of citations is particularly
+important. The `pandoc-citeproc` filter is an add-on that handles
+these. It can be installed alongside `pandoc`. Your bibliography can
+be stored in one of a variety of formats (such as BibTeX, or EndNote).
+Within your `.md` document, cites are referred to by their key, such
+as `[@healy14datavisualsociol]`. When `pandoc` converts your document,
+the cite key is replaced with the reference information, like this
+[@healy14datavisualsociol], and the full bibliographic entry is
+included in an automaticaly-generated list of references.
+Read
+[Pandoc's documentation for more details](http://pandoc.org/README.html#citations) about
+citations. Pandoc can also handle in-text labels and cross-references.
+A filter
+named
+[`pandoc-crossref`](https://github.com/lierdakil/pandoc-crossref)
+extends the extends the `@label` convention to deal to things like
+figures, tables, equations, theorems, code listings and so on.
+
+There is more than one way to have pandoc manage
 citations, but here we just use the most self-contained route. Simple
 documents can be contained in a single `.md` file. Documents including
 data analysis start life as `.Rmd` files which are then knitted into

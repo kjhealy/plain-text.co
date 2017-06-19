@@ -126,12 +126,12 @@ will want to display the code as well, as here.
 ```{r example-figure-r, fig.cap='R code for a figure.', out.width="100%"}
 library(ggplot2)
 tea <- rnorm(100)
-biscuits <- tea + rnorm(100,0,1.3)
+biscuits <- tea + rnorm(100, 0, 1.3)
 data <- data.frame(tea, biscuits)
-p <- ggplot(data, aes(x=tea, y=biscuits)) +
+p <- ggplot(data, aes(x = tea, y = biscuits)) +
     geom_point() + 
-    geom_smooth(method="lm") + 
-    labs(x="Tea", y="Biscuits") + theme_bw() 
+    geom_smooth(method = "lm") + 
+    labs(x = "Tea", y = "Biscuits") + theme_bw() 
 print(p)
 
 ```
@@ -142,14 +142,15 @@ editing. You can work with RMarkdown files in any text editor, and
 Emacs has strong support for them. RStudio also comes with built-in
 support for `.Rmd` files and makes it very easy to produce HTML and
 PDF output, and to publish your reports to the web via its
-[RPubs](http://rpubs.com) service.
+[RPubs](http://rpubs.com) service.[^rpubs]
+
+[^rpubs]: RStudio's Rmarkdown support uses all the same tools described here---i.e. knitr, pandoc, and so on. Writing RMarkdown documents via RStudio is the easiest way to get used to producing finished papers and reports using plain-text sources and R. 
 
 The [knitr website](http://yihui.name/knitr/) has 
 [numerous examples](http://yihui.name/knitr/demo/minimal/) showing how
 it works. These range from
 [the basic setup](https://raw.githubusercontent.com/yihui/knitr-examples/master/001-minimal.Rmd)
-to [more developed cases](http://yihui.name/knitr/demos/) to
-[more developed examples](http://yihui.name/knitr/demo/showcase/).
+to [more developed examples](http://yihui.name/knitr/demo/showcase/).
 
 The literate programming approach has its limits. For large or complex
 analyses it can still make more sense to produce the final result in
