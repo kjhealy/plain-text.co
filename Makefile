@@ -42,6 +42,13 @@ clean:
 public: tufte
 	cp *.Rmd public/
 	cp favicon.ico public/
+	cd public && mv 01-record.Rmd keep-a-record.Rmd
+	cd public && mv 02-edit.Rmd write-and-edit.Rmd
+	cd public && mv 03-reproduce.Rmd reproduce-word.Rmd
+	cd public && mv 04-make.Rmd pull-it-together.Rmd
+	cd public && mv 04-the-esk.Rmd an-emacs-starter-kit.Rmd
+	cd public && mv 05-pros.Rmd do-i-have-to-use-this-stuff.Rmd
+	cd public && mv 06-links.Rmd links-to-other-resources.Rmd
 	find public -type d -print0 | xargs -0 chmod 755
 	find public -type f -print0 | xargs -0 chmod 644
 
