@@ -233,12 +233,10 @@ shorthand, as well as special variables like `$@` and `$<`, which mean
 prerequisite", respectively.
 
 ```{#lst:makefile .bash caption="A more complicated Makefile"}
-## Extension (e.g. md, markdown, mdown).
-## for all markdown files in the directory
+## What extension (e.g. md, markdown, mdown) is being used for markdown files
 MEXT = md
 
-## Variable expands to a list of all markdown files 
-## in the working directory
+## Expands to a list of all markdown files in the working directory
 SRC = $(wildcard *.$(MEXT))
 
 ## Location of Pandoc support files.
@@ -263,10 +261,9 @@ html:	clean $(HTML)
 tex:	clean $(TEX)
 docx:	clean $(DOCX)
 
-## The commands associated with each rule.
-## This first one is run when `make html` is typed.
-## Read the rule as "When making the html file, 
-## run this pandoc command if the .md file has changed."
+## The commands associated with each rule. The first one is run with 
+## `make html`. Read the rule as "When making the html file, run this pandoc 
+## command if the .md file has changed."
 %.html:	%.md
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block \ 
     -w html -S --template=$(PREFIX)/templates/html.template \

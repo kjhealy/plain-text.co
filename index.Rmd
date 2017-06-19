@@ -4,9 +4,15 @@ author:
 - name: "Kieran Healy"
   affiliation: "Duke University"
   email: "kjhealy@soc.duke.edu"
-date: ""
+date: "This version: `r Sys.Date()`."
 secnumdepth: 1
 crossrefYaml: "./pandoc-crossref-settings.yaml"
+documentclass: memoir
+link-citations: yes
+numbersections: yes
+smallverbatim: yes
+listings: yes
+chapterstyle: article-6
 ...
 
 # Introduction 

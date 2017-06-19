@@ -30,6 +30,9 @@ tufte:
 	cd public && perl -p -i -e 's/<div class="sourceCode">/<p class="sourceCode">/g' *.html
 	cd public && perl -p -i -e 's/<\/pre><\/div>/<\/pre><\/p>/g' *.html
 
+pdf:
+	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_book2')"
+	cd public && mv _main.pdf plain-person-text.pdf
 
 clean:
 	$(RM) $(HTML_FILES)
@@ -42,7 +45,7 @@ public: tufte
 	find public -type d -print0 | xargs -0 chmod 755
 	find public -type f -print0 | xargs -0 chmod 644
 
-deploy: public
+deploy: public pdf
 	rsync -crzve 'ssh -p 22' $(PUBLIC_DIR) $(SSH_USER):$(DOCUMENT_ROOT)
 
 .PHONY: clean

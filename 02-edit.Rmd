@@ -170,7 +170,7 @@ keystroke. This is a very efficient way of doing interactive data
 analysis while building up code you can use again in future.
 
 ```{r ess, fig.cap='Working with R in Emacs using ESS. A document containing R code is open in the top half of the screen. Below the divider, an R session is running, also inside Emacs. Code from the top pane is sent to the bottom with a keyboard shortcut, where it is evaluated by R. We can also jump down to the bottom pane and do work there. Small details like a lint checker, active line highlighting, and revision-control information are also visible.', echo=FALSE, out.width="100%"}
-knitr::include_graphics("figures/emacs-ess-2016.png")
+knitr::include_graphics("figures/emacs-ess-compact.png")
 ```
 
 You'll present your results in papers, but also in talks where you
