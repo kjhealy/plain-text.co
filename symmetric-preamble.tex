@@ -1,0 +1,15 @@
+%% Redefining the figure environment to include a check of whether the image floated is on an odd or even page. This is because LaTeX can get confused with tufte-latex's symmmetric option and float the captions of some figures on the wrong side of the page.
+
+%% Problem and LaTeX solution: http://tex.stackexchange.com/questions/37726/problem-with-captions-at-top-of-page-for-tufte-latex
+
+%% Integration with pandoc and knitr/Rmarkdown:
+%% http://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc
+
+\usepackage[strict]{changepage}
+
+\makeatletter
+\let\oldfigure\figure
+\def\figure{\@ifnextchar[\figure@i \figure@ii}
+\def\figure@i[#1]{\oldfigure[#1]\centering}
+\def\figure@ii{\oldfigure \checkoddpage \ifoddpage \forcerectofloat \else \forceversofloat \fi}
+\makeatother

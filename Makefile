@@ -32,12 +32,20 @@ tufte:
 
 pdf:
 	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_book2')"
+	cp -r figures public/
+	cp -r _bookdown_files/_main_files public/
+	cd public && pdflatex _main.tex
+	cd public && pdflatex _main.tex
+	cd public && pdflatex _main.tex
+	cd public && pdflatex _main.tex
 	cd public && mv _main.pdf plain-person-text.pdf
 
 clean:
 	$(RM) $(HTML_FILES)
 	rm -rf _book/
 	rm -rf public/
+	rm -f _main*
+	rm -rf _bookdown_files/ 
 
 public: tufte
 	cp *.Rmd public/

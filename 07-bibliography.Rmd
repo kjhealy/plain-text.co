@@ -1,0 +1,18 @@
+---
+reftex: <!-- \bibliography{/Users/kjhealy/Documents/bibs/socbib-pandoc.bib} -->
+...
+
+\backmatter
+
+# References {-} 
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+\footnotesize
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+# knitr::write_bib(.packages(), 'packages.bib')
+```

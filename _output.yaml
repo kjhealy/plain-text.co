@@ -30,16 +30,22 @@ bookdown::tufte_html_book:
     in_header: assets/envision-css.html
     before_body: assets/menu.html
     after_body: assets/envision-js.html
-
+    
 bookdown::tufte_book2:
   latex_engine: pdflatex
-  toc: no
+  toc: yes
   keep_tex: yes
   pandoc_args: [
   "--listings",
   "--filter", "pandoc-crossref",
   "--filter", "pandoc-citeproc",  
   "--csl=/Users/kjhealy/.pandoc/csl/apsa.csl",
-  "--bibliography=/Users/kjhealy/Documents/bibs/socbib-pandoc.bib"]
-  template: "/Users/kjhealy/.pandoc/templates/bookdown-article.template"
+  "--bibliography=/Users/kjhealy/Documents/bibs/socbib-pandoc.bib"
+  ]
+  template: "/Users/kjhealy/.pandoc/templates/dataviz-booktemplate.tex"
   highlight: tango
+  includes:
+    in_header: symmetric-preamble.tex
+    
+dummy::listings:
+    render_listings: no

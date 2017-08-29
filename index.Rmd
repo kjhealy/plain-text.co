@@ -1,19 +1,83 @@
 ---
 title: "The Plain Person's Guide to Plain Text Social Science"
+subtitle: ""
 author:
 - name: "Kieran Healy"
   affiliation: "Duke University"
   email: "kjhealy@soc.duke.edu"
-date: "This version: `r Sys.Date()`."
-secnumdepth: 1
+date: ""
 crossrefYaml: "./pandoc-crossref-settings.yaml"
-documentclass: memoir
+documentclass: book
+classoption: symmetric,titlepage,openright
+bibliography: [packages.bib]
 link-citations: yes
 numbersections: yes
-smallverbatim: yes
+secnumdepth: 1
 listings: yes
-chapterstyle: article-6
+usecharter: yes
+pandoc-crossref: yes
+smallverbatim: \footnotesize
+cover-image: figures/plaintext-cover-us-letter.png
+cover-note: ""
+author-note: "Kieran Healy is Associate Professor of Sociology at Duke University. For more information, see his  website at `http://kieranhealy.org`."
+dedication: ""
+colophon-note: "This book was made with open-source tools, principally R, ggplot2, knitr, bookdown, pandoc, and \\LaTeX. The text is set in Bitstream Charter, Adobe Source Sans Pro, and Bera Mono."
+copyright-page: yes
+copyright-year: "2017"
+description: ""
+disclaimer: "Incomplete draft. This version: `r Sys.Date()`."
 ...
+
+
+```{r setup, echo=FALSE, results="hide", warning=FALSE, message=FALSE, cache=FALSE}
+library(knitr)
+library(tint)
+library(ggplot2)
+library(kjhutils)
+
+## Store output format for conditional formatting of latex vs html
+## tables later
+
+current_output <- knitr::opts_knit$get('rmarkdown.pandoc.to')
+
+## Knitr setup
+opts_knit$set(width=40)
+
+using_listings <- function(fn = "_output.yaml", lstn = "render_listings: yes") {
+    x <- stringr::str_detect(readLines(fn), lstn)
+    any(x)
+}
+
+if(using_listings()) render_listings()
+
+## Harmonize plot fonts with body text
+library(showtext)
+opts_chunk$set("fig.showtext"=TRUE)
+
+# library(myriad)
+# import_myriad()
+
+library(sourcesans)
+import_source_sans()
+
+## In case we call it later
+# theme_book <- theme_myriad
+theme_book <- theme_sourcesans
+theme_set(theme_book())
+
+wide_out <- function(dig = 3, wid = 100){
+    options(digits = dig, width = wid)
+}
+
+
+narr_out <- function(dig = 6, wid = 60){
+    options(digits = dig, width = wid)
+}
+```
+
+\mainmatter
+\pagenumbering{arabic} 
+
 
 # Introduction 
 
