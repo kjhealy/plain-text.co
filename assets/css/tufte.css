@@ -48,7 +48,7 @@ h4.author, h4.date {
     line-height: 1;
 }
 
-.numeral {  }
+.numeral { font-family: et-book-roman-old-style; }
 
 .danger { color: red; }
 
@@ -105,7 +105,7 @@ div.figure {
 /* Links: replicate underline that clears descenders */
 a:link, a:visited { color: inherit; }
 
-a:link { text-decoration: underline;
+a:link { text-decoration: none;
        }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) { a:link { background-position-y: 87%, 87%, 87%; } }
@@ -132,9 +132,9 @@ img {max-width: 100%;}
                          vertical-align: baseline;
                          position: relative; }
 
-.sidenote-number { 
-    position: relative;
-    vertical-align: baseline; }
+.sidenote-number { font-family: et-book-roman-old-style;
+                                           position: relative;
+                                           vertical-align: baseline; }
 
 .sidenote-number { font-size: 1rem;
                          top: -0.5rem;

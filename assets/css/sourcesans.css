@@ -144,8 +144,6 @@ subtitle { font-style: italic;
     padding-bottom: 1em;
 }
 
-
-
 .code { font-family: 'source-code-pro', 'Inconsolata', 'Menlo', 'Iosevka', 'PragmataPro', monospace;
         color: #222;
         font-size: 1em;
@@ -164,4 +162,8 @@ subtitle { font-style: italic;
 
 .appendix {
     color: #888888;
+}
+
+.sidenote-number {
+    font-family: "source-sans-pro", Arial, Helvetica, sans-serif;
 }

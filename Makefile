@@ -18,13 +18,14 @@ html: $(HTML_FILES)
 
 tufte: 
 	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_html_book')"
+	mv _book public
 	cp -r assets/envision/css public/
 	cp -r assets/envision/js public/
 	cp -r assets/envision/font public/
 	cp assets/pushy/css/normalize.css public/css
-	cp assets/toc.css public/css/toc.css
-	cp assets/css/sourcesans.css public/css/sourcesans.css
-	cp assets/css/tufte.css public/libs/tufte-css-2015.12.29/
+	cp assets/css/toc.css public/css
+	cp assets/css/sourcesans.css public/css
+	cp assets/css/tufte.css public/libs/tufte-css-2015.12.29
 	cd public && perl -p -i -e 's/oORLOo/<code>/g' *.html
 	cd public && perl -p -i -e 's/oORROo/<\/code>/g' *.html
 	cd public && perl -p -i -e 's/<div class="sourceCode">/<p class="sourceCode">/g' *.html
@@ -32,20 +33,20 @@ tufte:
 
 pdf:
 	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_book2')"
-	cp -r figures public/
-	cp -r _bookdown_files/_main_files public/
-	cd public && pdflatex _main.tex
-	cd public && pdflatex _main.tex
-	cd public && pdflatex _main.tex
-	cd public && pdflatex _main.tex
-	cd public && mv _main.pdf plain-person-text.pdf
+	cp -r figures _book/
+	cp -r _bookdown_files/_main_files _book/
+	cd _book && pdflatex _main.tex
+	cd _book && pdflatex _main.tex
+	cd _book && pdflatex _main.tex
+	cd _book && pdflatex _main.tex
+	cd _book && mv _main.pdf plain-person-text.pdf
 
 clean:
 	$(RM) $(HTML_FILES)
 	rm -rf _book/
 	rm -rf public/
 	rm -f _main*
-	rm -rf _bookdown_files/ 
+	rm -rf _bookdown_files/
 
 public: tufte
 	cp *.Rmd public/
@@ -61,6 +62,7 @@ public: tufte
 	find public -type f -print0 | xargs -0 chmod 644
 
 deploy: public pdf
+	cp _book/plain-person-text.pdf public/
 	rsync -crzve 'ssh -p 22' $(PUBLIC_DIR) $(SSH_USER):$(DOCUMENT_ROOT)
 
 .PHONY: clean
