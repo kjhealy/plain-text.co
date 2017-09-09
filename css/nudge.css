@@ -66,6 +66,11 @@
 /* Menu Movement */
 
 .pushy-left{
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
     -webkit-transform: translate3d(-600px,0,0);
     -moz-transform: translate3d(-600px,0,0);
     -ms-transform: translate3d(-600px,0,0);
@@ -102,7 +107,7 @@
 /* Site Overlay */
 
 .site-overlay{
-    display: none;
+  /*  display: none; */
 }
 
 .pushy-active .site-overlay{
