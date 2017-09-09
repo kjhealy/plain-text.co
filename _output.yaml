@@ -24,6 +24,7 @@ bookdown::tufte_html_book:
   split_by: chapter
   toc: yes
   toc_depth: 1
+  link-citations: no
   template: "/Users/kjhealy/.pandoc/templates/tufte-html-vis.html"
   tufte_variant: envisioned
   includes:

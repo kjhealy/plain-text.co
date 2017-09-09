@@ -25,7 +25,7 @@ tufte:
 	cp assets/pushy/css/normalize.css public/css
 	cp assets/css/toc.css public/css
 	cp assets/css/sourcesans.css public/css
-	cp assets/css/tufte.css public/libs/tufte-css-2015.12.29
+	cp assets/css/tufte.css public/libs/tufte-css-2015.12.29/
 	cd public && perl -p -i -e 's/oORLOo/<code>/g' *.html
 	cd public && perl -p -i -e 's/oORROo/<\/code>/g' *.html
 	cd public && perl -p -i -e 's/<div class="sourceCode">/<p class="sourceCode">/g' *.html
