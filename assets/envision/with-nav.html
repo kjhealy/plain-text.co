@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8"/>
+  <title>Envisioned CSS</title>
+  <link rel="stylesheet" href="css/envisioned.css"/>
+  <link rel="stylesheet" href="css/tablesaw-stackonly.css"/>
+  <link rel="stylesheet" href="css/nudge.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <nav class="pushy pushy-left">
+<ul>
+<li class="pushy-item"><a href="#navstart">Getting Started</a></li>
+<li class="pushy-item"><a href="#navfundamental">Fundamentals</a></li>
+<li class="pushy-item"><a href="#navcolor">Color</a></li>
+<li class="pushy-item"><a href="#navfont">Font</a></li>
+<li class="pushy-item"><a href="#navlists">Lists</a></li>
+<li class="pushy-item"><a href="#navnotes">Sidenotes</a></li>
+<li class="pushy-item"><a href="#navfigures">Figures</a></li>
+<li class="pushy-item"><a href="#navtables">Tables</a></li>
+<li class="pushy-item"><a href="#navcode">Code</a></li>
+</ul>
+</nav>
+
+<div class="site-overlay"></div>
+
+  <article id="container">
+  <div class="menu-btn">&#43;</div>
+  <a href="index.html" target="_blank">View Envisioned CSS (w/o nav)</a>
+    <h1>Envisioned CSS</h1>
+    <subtitle>Jef Lippiatt</subtitle>
+    <section>
+      <p>Envisioned CSS provides styles to give online documentation the hierarchy and clarity of minimalist academic textbooks. The goal of Envisioned CSS is to present text, tables, graphics and callouts in harmony.</p>
+      <p>Envisioned CSS is grateful for <a href="http://www.daveliepmann.com/tufte-css/">Dave Liepmann's Tufte CSS</a> available on GitHub at <a href="https://github.com/daveliepmann/tufte-css">tufte-css</a>. Tufte<label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle"/> is a master of clean documentation and his approach has been adapted by Envisioned CSS to improve typography choices and table formatting for online consumption.
+        <span class="sidenote">
+          This page is in fact an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout Example</a> PDF.
+        </span> </p>
+      <p>If you want to help improve Envisioned CSS, feel free to create an issue or pull request on the GitHub project: <a href="https://github.com/nogginfuel/envisioned-css">envisioned-css</a>.
+      <p>This approach isn't to make websites more like books, rather to use existing best practices for documentation and adapt them to the web. This is a starting point not a rigid set of rules.</p>
+    </section>
+
+    <section>
+      <h2 id="navstart">Getting Started</h2>
+      <p>To use Envisioned CSS, copy <span class="code">envisioned.css</span>, <span class="code">tablesaw-bare.css</span>, <span class="code">Roboto-Regular.ttf</span>, <span class="code">RobotoCondensed-Regular.ttf</span> and <span class="code">RobotoMono-Regular.ttf</span> to your project directory and add the following to your HTML document's <span class="code">head</span> block:</p>
+
+      <pre class="code">
+      	&lt;link rel="stylesheet" href="css/envisioned.css"/&gt;
+        &lt;link rel="stylesheet" href="css/tablesaw-bare.css"/&gt;
+        &lt;link rel="stylesheet" href="css/nudge.css"/&gt;
+      </pre>
+
+	  <p>You will also need to copy <span class="code">jquery.js</span>,<span class="code">tablesaw-stackonly.js</span> and <span class="code">nudge.min.js</span> (or the folder structure) add the following block prior to the closing <span class="code">&lt;/body&gt;</span> tag:
+
+	  <pre class="code">
+      	&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+        &lt;script src="js/tablesaw-bare.js"&gt;&lt;/script&gt;
+        &lt;script src="js/nudge.min.js"&gt;&lt;/script&gt;
+      </pre>
+
+      <p>Use the following CSS rules, and the Envisioned CSS structure described for optimal results.  Use your preferred browser development tools for additional clarity.</p>
+    </section>
+
+    <section>
+      <h2 id="navfundamental">Fundamentals</h2>
+      <h3>Navigation</h3>
+      <p>Online navigation is a basic necessity. Minimal navigation has been added to this project to support navigation between sections and/or separate pages of related documentation. Organize your navigation within a <span class="code">nav</span> element inside your <span class="code">body</span> tag. Inside the <span class="code">nav</span> tags use the following:</p>
+      
+      <pre class="code">
+      	&lt;nav class="pushy pushy-left"/&gt;
+            &lt;ul&gt;
+            	&lt;li&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+      </pre>
+      
+      <p>The above snippet needs to live within the <span class="code">body</span> tag, but it must reside above the rest of the page content. So the navigation can nudge the content over, put the entirety your <span class="code">article</span> within a <span class="code">div</span> tag:</p>
+      
+      <pre class="code">
+      	&lt;div id="container"/&gt;
+            &lt;article&gt;
+            	&lt;section&gt;
+                	&lt;p&gt;Section 1 Content&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;section&gt;
+                	&lt;p&gt;Section 2 Content&lt;/p&gt;
+                &lt;/section&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+      </pre>
+      
+      <h3>Sections</h3>
+      <p>Organize your document with an <span class="code">article</span> element inside your <span class="code">body</span> tag. Inside that, use <span class="code">section</span> tags around each logical grouping of text and headings.</p>
+
+      <h3>Headings</h3>
+      <p>Envisioned CSS uses <span class="code">h1</span> for the page title, <span class="code">h2</span> for section headings, and <span class="code">h3</span> for subsection headings. More specific headings are not supported. Clean documentation should not use more than 3 levels of hierarchy. If this feels restrictive, consider restructuring your content:</p>
+      <blockquote cite="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
+        <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of <em>sentences</em> which then cumulate sequentially into <em>paragraphs</em>, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn't require an elaborate hierarchy to organize.</p>
+        <footer><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, 'Book design: advice and examples' thread</a></footer>
+      </blockquote>
+      <p><span class="newthought">In his later books<label for="2" class="margin-toggle sidenote-number"></label></span><input type="checkbox" id="2" class="margin-toggle"/><span class="sidenote">E.g. <a href="http://www.edwardtufte.com/tufte/books_be">Beautiful Evidence</a></span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. For this we use a span with the class <span class="code">newthought</span>, as demonstrated at the beginning of this paragraph. The vertical space is accomplished separately, through the <span class="code">&lt;section&gt;</span> class. The vertical space seems unnecessary when using this technique to replace <span class="code">h2</span> elements, as in this paragaph. Whichever approach you choose, be consistent. Do not alternate use of header elements and the <span class="code">newthought</span> technique. Pick one approach and stick to it.</p>
+      <h3 id="navcolor">Color</h3>
+      <p>Although print handouts typically have a pure white background, the web is better served by the use of slightly off-white and off-black colors. This approach reduces eye strain and improves readability. The selected hues are <span class="code">#fefefe</span> (background) and <span class="code">#222</span> (text).</p>
+      <p>Other types of content, such as links and code, have slightly different visual treatments. Sidenote numbers are bright red to distinguish them from regular text.</p>
+
+      <h3 id="navfont">Font</h3>
+      <p>In print, Tufte uses the proprietary Monotype Bembo<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle"/><span class="sidenote">See Tufte's comment in the <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">Tufte book fonts</a> thread.</span> font. However, reading online is a much different experience. The fonts selected are all within the Roboto<label for="4" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4" class="margin-toggle"/><span class="sidenote">See the <a href="https://www.google.com/fonts/specimen/Roboto">Roboto</a> styles and variations.</span> Family which improve readability. Roboto is the signature font family and the default font on Android and ChromeOS.</p>
+      <p>Envisioned CSS includes several Roboto fonts using <span class="code">@font-face</span>. This means you'll have to make the .ttf files available to your readers. By default I've set Roboto Condensed for the body font, however, if you desire more word spacing you can easily which it to Roboto regular.</p>
+      <p>Code snippets (using the <span class="code">code</span> class) are RobotoMono-Regular<label for="5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5" class="margin-toggle"/><span class="sidenote">See the <a href="https://www.google.com/fonts/specimen/Roboto+Mono">Roboto Mono</a> styles and variations.</span> font.</p>
+
+      <h3 id="navlists">Lists</h3>
+      <p>Tufte points out that while lists have valid uses, they tend to promote ineffective writing habits due to their "lack of syntactic and intellectual discipline". He is particularly critical of hierarchical and bullet-pointed lists. So before reaching for an HTML list element, ask yourself:</p>
+      <ul>
+        <li>Does this list actually have to be represented using an HTML <span class="code">ul</span> or <span class="code">ol</span> element?</li>
+        <li>Would my idea be better expressed as sentences in paragraphs?</li>
+        <li>Is my message causally complex enough to warrant a flow diagram instead?</li>
+      </ul>
+      <p>This is but a small subset of a proper overview of the topic of lists in communication. A better way to understand Tufte's thoughts on lists would be to read "The Cognitive Style of PowerPoint: Pitching Out Corrupts Within," a chapter in Tufte's book <em>Beautiful Evidence</em>, excerpted at some length by Tufte himself <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0002QF">on his website</a>. The whole piece is information-dense and therefore difficult to summarize. He speaks to web design specifically, but in terms of examples and principles rather than as a set of simple do-this, don't-do-that prescriptions. It is well worth reading in full for that reason alone.</p>
+      <p>For these reasons, Envisioned CSS encourages caution before reaching for a list element, and by default removes the bullet points from unordered lists.</p>
+    </section>
+    
+    <section>
+      <h2 id="navnotes">Sidenotes</h2>
+      <p>One of the most distinctive features of Tufte's style is his extensive use of sidenotes.<label for="6" class="margin-toggle sidenote-number"></label><input type="checkbox" id="6" class="margin-toggle"/><span class="sidenote">This is a sidenote.</span> Perhaps you have noticed their use in this document already.</p>
+      <p>On large viewports, Envisioned CSS uses the margin for sidenotes, margin notes, and small figures. Sidenotes consist of 1) a superscript reference number that goes inline with the text, and 2) a sidenote containing content that repeats the superscripted number to reinforce its connection to the text. To add the former, just put <span class="code">&lt;span class="sidenote-number"&gt;&lt;/span&gt;</span> where you want the reference to go. Immediately after that goes the <span class="code">span</span> with class <span class="code">sidenote</span>, inserted directly into the middle of the <span class="code">p</span> tag containing the reference text. This will give the sidenote the correct height.</p>
+      <p>If you don't want footnote-style numberings on your sidenotes, what you want is a margin note.
+        <label for="7" class="margin-toggle">&#8853;</label>
+        <input type="checkbox" id="7" class="margin-toggle"/>
+        <span class="marginnote">
+          This is a margin note. Notice there isn't a number preceding the note.
+        </span> They are almost identical to sidenotes but are kept semantically distinct because they operate differently on small screens. Figures in the margin are created as margin notes, as demonstrated in the next section.</p>
+    </section>
+
+    <section>
+      <h2 id="navfigures">Figures</h2>
+      <p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept in context with the text that discusses them. In print, this means they are not relegated to a separate page. On online, that means graphics and their accompanying text are displayed in context to minimize extra clicks and unnecessary scrolling. On small devices this context has been adapted with minimal clicking.</p>
+      <p>Images and graphics play an integral role in Tufte’s work<label for="8" class="margin-toggle">&#8853;</label><input type="checkbox" id="8" class="margin-toggle"/><span class="marginnote"><img src="http://placehold.it/396x255.png"/>Figure 1: Visual Comparison of species</span>. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <span class="code">p</span> tag, as seen in Figure 1 to the right of this paragraph.</p>      
+      <p>If you need a full-width figure, give it the <span class="code">fullwidth</span> class. Make sure that's inside an <span class="code">article</span>, and it will take up (almost) the full width of the screen. Don't wrap the figure in a paragraph tag. To give it a caption, use a <span class="code">figcaption</span> tag inside the <span class="code">figure</span> tag. This approach is demonstrated in Figure 2.</p>
+      <p class="code">Data plot description</p>
+      <figure class="fullwidth">
+        <img src="http://placehold.it/1282x246.png"/>
+        <figcaption>Figure 2: Full width figure</figcaption>
+      </figure>
+      <br/>
+      <p>Besides margin and full width figures, you can of course also include figures constrained to the main column. You're going to have to police yourself with the size of any images. Wrap the <span class="code">figure</span> tag in a paragraph tag. Any label or margin note goes in a <span class="code">figcaption</span> tag inside the figure.</p>
+      <p>
+        <figure>
+          <img src="http://placehold.it/757x472.png"/>
+          <figcaption>Figure 3: A figure the width of the main column</figcaption>
+        </figure>
+      </p>
+    </section>
+
+    <section>
+      <h2 id="navtables">Tables</h2>
+      <p>Tables are presented by default with minimal grid lines. Table labels are margin notes with an additional <span class="code">table-label</span> class, placed inside a <span class="code">div</span> tag of class <span class="code">table-wrapper</span> that wraps the <span class="code">table</span>. Note that on smaller viewports (e.g. tablets and phones) tables will collapse into unordered lists. This adaptive functionality, provided by TableSaw<label for="9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="9" class="margin-toggle"/><span class="sidenote"><a href="https://github.com/filamentgroup/tablesaw" target="_blank">Tablesaw</a> was created by <a href="https://www.filamentgroup.com/" target="_blank">filament group</a>.</span>, makes tabular data easier to consume on small devices.</p>
+        <div class="table-wrapper">
+          <span class="table-caption">
+            Table 1: first row of metcars.
+            </span>
+          <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+            <thead><th></th><th>mpg</th><th>cyl</th><th>disp</th><th>hp</th><th>drat</th><th>wt</th></thead>
+            <tbody>
+              <tr><td class="text">Mazda RX4</td><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.62</td></tr>
+              <tr><td class="text">Mazda RX4 Wag</td><td>21.0</td><td>6</td><td>160</td><td>110</td><td>3.90</td><td>2.88</td></tr>
+              <tr><td class="text">Datsun 710</td><td>22.8</td><td>4</td><td>108</td><td>93</td><td>3.85</td><td>2.32</td></tr>
+              <tr><td class="text">Hornet 4 Drive</td><td>21.4</td><td>6</td><td>258</td><td>110</td><td>3.08</td><td>3.21</td></tr>
+              <tr><td class="text">Hornet Sportabout</td><td>18.7</td><td>8</td><td>360</td><td>175</td><td>3.15</td><td>3.44</td></tr>
+              <tr><td class="text">Valiant</td><td>18.1</td><td>6</td><td>225</td><td>105</td><td>2.76</td><td>3.46</td></tr>
+            </tbody>
+          </table>
+        </div>
+    </section>
+
+
+    <section>
+      <h2 id="navcode">Code</h2>
+      <p>Code samples are monospace using the <span class="code">code</span> class, as I've been using in this document to denote HTML tags like the word 'code' earlier in this sentence. Code blocks use that class in conjunction with the <span class="code">pre</span> tag, which gives us indentation too:</p>
+      <pre class="code">
+// imperative programming:
+for (i = 0; i++; i <= num) {
+   all_the_things[i].useEnvisioned();
+}
+      </pre>
+    </section>
+  </article>
+
+<script src="js/jquery.js"></script>
+<script src="js/tablesaw-stackonly.js"></script>
+<script src="js/nudge.min.js"></script>
+</body>
+</html>
