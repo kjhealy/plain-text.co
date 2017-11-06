@@ -161,7 +161,7 @@ systems.
 
 ## A Broader Perspective
 
-It would be nice if all you needed to do your work was a box software
+It would be nice if all you needed to do your work was a box 
 of software tricks and shortcuts. But of course it's a bit more
 complicated than that. In order to get to the point where you can
 write a paper, you need to be organized enough to have read the right
