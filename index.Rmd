@@ -8,7 +8,7 @@ author:
 date: ""
 crossrefYaml: "./pandoc-crossref-settings.yaml"
 documentclass: book
-classoption: symmetric,titlepage,openright
+classoption: symmetric,titlepage,openany
 bibliography: [packages.bib]
 numbersections: yes
 secnumdepth: 1
