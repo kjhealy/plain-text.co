@@ -86,7 +86,7 @@ As a beginning graduate student in the social sciences, what sort of software sh
 
 To help you get started, I provide a drop-in set of useful defaults to get started with [Emacs](https://www.gnu.org/software/emacs/) (a powerful, free text-editor). I share some templates and style files that can get you quickly from plain text to various output formats. But I emphasize that this is one viable choice amongst many. I discuss several alternatives because no humane person should recommend Emacs without presenting some other options as well. 
 
-To being, I discuss why you should care about having better control over your work materials. Rather than dive straight in to a list of tools or a recapitulation of their manuals, I want to encourage you to begin thinking about this issue in a way that will lead you to some solution that works well for you. Perhaps that will mean using the tools described here, but perhaps not.
+To begin, I discuss why you should care about having better control over your work materials. Rather than dive straight in to a list of tools or a recapitulation of their manuals, I want to encourage you to begin thinking about this issue in a way that will lead you to some solution that works well for you. Perhaps that will mean using the tools described here, but perhaps not.
 
 ## Motivation
 
