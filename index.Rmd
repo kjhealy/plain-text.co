@@ -23,7 +23,7 @@ author-note: "Kieran Healy is Associate Professor of Sociology at Duke Universit
 dedication: ""
 colophon-note: "This book was made with open-source tools, principally R, ggplot2, knitr, bookdown, pandoc, and \\LaTeX. The text is set in Bitstream Charter, Adobe Source Sans Pro, and Bera Mono."
 copyright-page: yes
-copyright-year: "2017"
+copyright-year: "2018"
 description: ""
 disclaimer: "This version: `r Sys.Date()`."
 ...
