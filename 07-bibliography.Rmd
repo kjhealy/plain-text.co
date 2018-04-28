@@ -2,7 +2,6 @@
 reftex: <!-- \bibliography{/Users/kjhealy/Documents/bibs/socbib-pandoc.bib} -->
 ...
 
-\backmatter
 
 # References {-} 
 \setlength{\parindent}{-0.2in}

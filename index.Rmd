@@ -7,13 +7,14 @@ author:
   email: "kjhealy@soc.duke.edu"
 date: ""
 crossrefYaml: "./pandoc-crossref-settings.yaml"
-documentclass: book
-classoption: symmetric,titlepage,openany
+documentclass: memoir
+classoption: 12pt,book
 bibliography: [packages.bib]
 numbersections: yes
 secnumdepth: 1
 listings: yes
-usecharter: yes
+useminion: yes
+sanshead: yes
 pandoc-crossref: yes
 smallverbatim: \footnotesize
 cover-image: figures/plaintext-cover-us-letter.png

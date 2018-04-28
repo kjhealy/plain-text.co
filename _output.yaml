@@ -47,6 +47,22 @@ bookdown::tufte_book2:
   highlight: tango
   includes:
     in_header: symmetric-preamble.tex
+
+
+bookdown::pdf_book:
+  latex_engine: pdflatex
+  toc: yes
+  keep_tex: yes
+  pandoc_args: [
+  "--listings",
+  "--filter", "pandoc-crossref",
+  "--filter", "pandoc-citeproc",  
+  "--csl=/Users/kjhealy/.pandoc/csl/apsa.csl",
+  "--bibliography=/Users/kjhealy/Documents/bibs/socbib-pandoc.bib"
+  ]
+  template: "/Users/kjhealy/.pandoc/templates/plain-person.tex"
+  highlight: tango
+
     
 dummy::listings:
     render_listings: no
