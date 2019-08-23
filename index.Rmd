@@ -12,7 +12,7 @@ classoption: 12pt,book
 bibliography: [packages.bib]
 numbersections: yes
 secnumdepth: 1
-listings: yes
+uselistings: yes
 useminion: yes
 sanshead: yes
 pandoc-crossref: yes
