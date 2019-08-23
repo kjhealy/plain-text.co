@@ -19,7 +19,7 @@ pandoc-crossref: yes
 smallverbatim: \footnotesize
 cover-image: figures/plaintext-cover-us-letter.png
 cover-note: ""
-author-note: "Kieran Healy is Associate Professor of Sociology at Duke University. For more information, see his  website at `http://kieranhealy.org`."
+author-note: "Kieran Healy is Professor of Sociology at Duke University. For more information, see his  website at `http://kieranhealy.org`."
 dedication: ""
 colophon-note: "This book was made with open-source tools, principally R, ggplot2, knitr, bookdown, pandoc, and \\LaTeX. The text is set in Bitstream Charter, Adobe Source Sans Pro, and Bera Mono."
 copyright-page: yes
