@@ -13,7 +13,7 @@ all: deploy
 html: $(HTML_FILES)
 
 %.html: %.Rmd
-	R --slave -e "set.seed(100);rmarkdown::render('$<')"
+	R --no-echo -e "set.seed(100);rmarkdown::render('$<')"
 	proc-panweb.sh $@
 
 tufte: 
