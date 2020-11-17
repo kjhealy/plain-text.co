@@ -7,13 +7,14 @@ author:
   affiliation: "Duke University"
   email: "kjhealy@soc.duke.edu"
 date: ""
-documentclass: book
-classoption: symmetric,titlepage,openany
+documentclass: memoir
+classoption: 12pt,book
 bibliography: [packages.bib]
 numbersections: yes
 secnumdepth: 1
 listings: True
 uselistings: yes
+useminion: yes
 usefabrikat: yes
 pandoc-crossref: yes
 smallverbatim: \footnotesize

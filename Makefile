@@ -28,10 +28,10 @@ tufte:
 	cp assets/css/tufte.css public/libs/tufte-css-2015.12.29/
 	cd public && perl -p -i -e 's/oORLOo/<code>/g' *.html
 	cd public && perl -p -i -e 's/oORROo/<\/code>/g' *.html
-	cd public && perl -p -i -e 's/<div class="sourceCode">/<p class="sourceCode">/g' *.html
+	cd public && perl -p -i -e 's/<div class="sourceCode"( id="cb\d{1,4}")>/<p class="sourceCode" $1>/g' *.html
 	cd public && perl -p -i -e 's/<\/pre><\/div>/<\/pre><\/p>/g' *.html
 
-pdf:
+tufte_pdf:
 	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_book2')"
 	cp -r figures _book/
 	cp -r _bookdown_files/_main_files _book/

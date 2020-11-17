@@ -186,7 +186,7 @@ fig1.pdf: fig1.r
 ```
 
 The big gotcha for `Makefiles` is that for no good reason they use the
-`<TAB>` key rather than spaces to indent the commands associated with
+tab key rather than spaces to indent the commands associated with
 rules. If you use spaces, `make` will not work. With the `Makefile` in
 @lst:makesimple, typing `make` at the command line will have make
 check the state of the final target (`makefile.pdf`) and all its
@@ -262,8 +262,7 @@ tex:	clean $(TEX)
 docx:	clean $(DOCX)
 
 ## The commands associated with each rule. The first one is run with 
-## `make html`. Read the rule as "When making the html file, run 
-## this pandoc command if the .md file has changed."
+## make html. 
 %.html:	%.md
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block \ 
     -w html -S --template=$(PREFIX)/templates/html.template \
@@ -301,7 +300,7 @@ clean:
 ```
 
 Note that the `pandoc` commands are interpreted single lines of text,
-not several lines separated by the `<return>` key. But you can use the
+not several lines separated by the `return` key. But you can use the
 `\` symbol to tell `make` to continue to the next line without a
 break. With this Makefile, typing `make pdf` would take all the `.md`
 files in the directory one at a time and run the pandoc command to
