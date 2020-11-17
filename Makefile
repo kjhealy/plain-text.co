@@ -41,6 +41,18 @@ pdf:
 	cd _book && pdflatex _main.tex
 	cd _book && mv _main.pdf plain-person-text.pdf
 
+
+xepdf:
+	Rscript --quiet -e "bookdown::render_book('index.Rmd', 'bookdown::tufte_book2')"
+	cp -r figures _book/
+	cp -r _bookdown_files/_main_files _book/
+	cd _book && xelatex _main.tex
+	cd _book && xelatex _main.tex
+	cd _book && xelatex _main.tex
+	cd _book && xelatex _main.tex
+	cd _book && mv _main.pdf plain-person-text.pdf
+
+
 clean:
 	$(RM) $(HTML_FILES)
 	rm -rf _book/

@@ -4,3 +4,4 @@ public/
 cache/
 *.html
 *.bak
+.Rproj.user
